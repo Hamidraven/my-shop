@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Roboto:wght@100&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Whisper&display=swap");
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background: url(./image/banner-phone.jpg) no-repeat center fixed;
+  background-size: cover;
+  position: relative;
+  .background-filter {
+    position: absolute;
+    inset: 0 0 0 0;
+    backdrop-filter: sepia(60%);
+    pointer-events: none;
+  }
+  @media (min-width: 769px) {
+    background: url(./image/banner.jpg) no-repeat center fixed;
+    background-size: cover;
+  }
+  picture {
+    source,
+    img {
+      width: 100%;
+      height: 100vh;
+      filter: sepia(60%);
+    }
+  }
+}
+h2.featured {
+  text-align: center;
+  margin-block: 3.5rem;
+}
