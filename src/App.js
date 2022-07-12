@@ -1,9 +1,26 @@
 import React, { useState } from "react";
 import products from "./data";
 import Products from "./Products";
+import Category from "./Category";
+import { GiHamburgerMenu } from "react-icons/gi";
+
+const categoryList = [
+  "all",
+  ...new Set(products.map((product) => product.category)),
+];
 
 export default function App() {
   const [items, setItems] = useState(products);
+
+  const filterCategory = (category) => {
+    if (category === "all") {
+      setItems(products);
+      return;
+    }
+    const newCategory = products.filter((item) => item.category === category);
+    setItems(newCategory);
+    console.log(category);
+  };
 
   return (
     <div>
@@ -36,7 +53,8 @@ export default function App() {
       </header>
       <main>
         <h2 className="featured">Featured Products</h2>
-        <Products items={items}/>
+        <Category categoryList={categoryList} filterCategory={filterCategory} />
+        <Products items={items} />
       </main>
     </div>
   );

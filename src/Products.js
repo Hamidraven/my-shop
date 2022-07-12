@@ -7,11 +7,10 @@ export const Products = ({ items }) => {
         const { id, name, price, image } = item;
         return (
           <article key={id}>
-            <img
-              src={image[0]}
-              alt={name}
-              onMouseOver={setTimeout(() => (this.src = image[1]), 1000)}
-            />
+            <div className="image-container">
+              <div className="backdrop-filter"></div>
+              <img src={image[0]} alt={name} />
+            </div>
             <div className="details">
               <h4>{name}</h4>
               <p>${price}.00</p>

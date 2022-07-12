@@ -1,0 +1,23 @@
+.category-list {
+  display: grid;
+  place-items: center;
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  ul {
+    height: 25ch;
+    overflow: auto;
+    transition: all 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bar {
+    &:hover {
+      transform: translateY(-0.35rem);
+    }
+  }
+}

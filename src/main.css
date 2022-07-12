@@ -325,17 +325,81 @@ nav .nav {
 .products-list {
   border-top: 1px solid;
   padding-block: 1.5rem;
-  margin-inline: 0.5rem;
+  margin-inline: 1.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(10rem, 25rem))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(10rem, 25rem));
-  gap: 0.5rem;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  row-gap: 2rem;
 }
 
-.products-list article {
-  border: 1px solid yellow;
+.products-list article .image-container {
+  position: relative;
+}
+
+.products-list article .image-container .backdrop-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+
+.products-list article .image-container .backdrop-filter:hover {
+  -webkit-backdrop-filter: brightness(120%);
+          backdrop-filter: brightness(120%);
+}
+
+.products-list article .image-container .backdrop-filter:active {
+  -webkit-backdrop-filter: brightness(90%);
+          backdrop-filter: brightness(90%);
+}
+
+.products-list article .details {
+  text-align: center;
+}
+
+.category-list {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.category-list button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.category-list ul {
+  height: 25ch;
+  overflow: auto;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category-list .bar:hover {
+  -webkit-transform: translateY(-0.35rem);
+          transform: translateY(-0.35rem);
 }
 /*# sourceMappingURL=main.css.map */
