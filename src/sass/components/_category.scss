@@ -8,7 +8,6 @@
     transition: all 0.2s linear;
   }
   ul {
-    height: 25ch;
     overflow: auto;
     transition: all 0.5s linear;
     display: flex;
@@ -18,6 +17,9 @@
   .bar {
     &:hover {
       transform: translateY(-0.35rem);
+    }
+    &:active {
+      transform: translateY(-0.1rem);
     }
   }
 }
