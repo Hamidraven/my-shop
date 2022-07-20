@@ -1,0 +1,45 @@
+footer {
+  border: 1px solid black;
+  margin: 0.5rem;
+  border-radius: 15px;
+  form {
+    display: grid;
+    gap: .25rem;
+    place-items: center;
+    * {
+      display: block;
+    }
+    input {
+      width: 90%
+    }
+  }
+  .social-media {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    a {
+      color: black;
+      border: 1px solid black;
+      border-radius: 50%;
+      padding: .25rem;
+      & + a {
+        margin-left: 1rem;
+      }
+      * {
+        width: 28px;
+      }
+    }
+  }
+  .footer-nav {
+    padding: 0.5rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      li + li {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

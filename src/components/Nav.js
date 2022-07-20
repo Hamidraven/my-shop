@@ -1,13 +1,14 @@
 import React from "react";
 import { FaSearch, FaUserAlt, FaShoppingBag, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Search from "./Search";
 
 const Nav = () => {
   return (
     <nav>
-      <a href="#" className="logo">
+      <Link to="/" className="logo">
         Soseki
-      </a>
+      </Link>
       <ul className="nav">
         <li>
           <a href="#">Shop</a>
@@ -21,7 +22,7 @@ const Nav = () => {
       </ul>
       <ul className="utilities">
         <li>
-          <a href="#">
+          <a onClick={() => <Search />}>
             <FaSearch />
           </a>
           <a href="#">

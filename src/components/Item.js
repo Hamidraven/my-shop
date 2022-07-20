@@ -23,17 +23,12 @@ const Item = () => {
     sizeList.push({ key, value });
   }
 
-  console.log(sizeList);
-  console.log(availableSizes);
-
   return (
     <div className="product">
       <div className="image-container">
         <img src={image[0]} alt={name} className="img1" />
         <img src={image[1]} alt={name} className="img2" />
-        {image[2] ? (
-          <img src={image[2]} alt={name} className="img3" />
-        ) : undefined}
+        {image[2] && <img src={image[2]} alt={name} className="img3" />}
       </div>
       <div className="details">
         <h5>{name}</h5>
@@ -42,19 +37,24 @@ const Item = () => {
         <p className="material-countryOfOrigin">
           {material} - MADE IN THE {countryOfOrigin}
         </p>
-        {extraInfo ? <p className="extraInfo">{extraInfo}</p> : undefined}
+        {extraInfo && <p className="extraInfo">{extraInfo}</p>}
         <p className="description">{description}</p>
       </div>
       <div className="shop">
         <ul className="size-list">
-          {sizeList.map((size) => {
-            return (
-              <li>
-                <input type="radio" name="size" value={size.key} />
-                <label htmlFor={size.key}>{size.key.toUpperCase()}</label>
-              </li>
-            );
-          })}
+          <form>
+            {sizeList.map((size) => {
+              return (
+                <li key={size.key}>
+                  <input type="radio" name="size" value={size.key}/>
+                  <label htmlFor={size.key}>{size.key.toUpperCase()}</label>
+                </li>
+              );
+            })}
+            <button type="submit" className="submit-btn">
+              add to cart
+            </button>
+          </form>
         </ul>
       </div>
     </div>

@@ -30,3 +30,9 @@ h2.featured {
   margin-block: 3.5rem;
 }
 
+.search {
+  position: fixed;
+  inset: 0 0 0 0;
+  display: grid;
+  place-items: center;
+}
