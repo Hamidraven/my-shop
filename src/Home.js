@@ -1,30 +1,30 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import products from "./components/data";
-import Products from "./components/Products";
+
 import Category from "./components/Category";
 import Nav from "./components/Nav";
 import Landing from "./Landing";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
-const categoryList = [
-  "all",
-  ...new Set(products.map((product) => product.category)),
-];
+// const categoryList = [
+//   "all",
+//   ...new Set(products.map((product) => product.category)),
+// ];
 
 export default function Home() {
   const [items, setItems] = useState(products);
 
-  const filterCategory = (category) => {
-    if (category === "all") {
-      setItems(products);
-      return;
-    }
+  // const filterCategory = (category) => {
+  //   if (category === "all") {
+  //     setItems(products);
+  //     return;
+  //   }
 
-    const newCategory = products.filter((item) => item.category === category);
-    setItems(newCategory);
-    console.log(category);
-  };
+  //   const newCategory = products.filter((item) => item.category === category);
+  //   setItems(newCategory);
+  //   console.log(category);
+  // };
 
   return (
     <div>
@@ -32,12 +32,14 @@ export default function Home() {
         <Nav />
         <div className="background-filter"></div>
       </header>
-      <Outlet />
       <main>
         {/* <h2 className="featured">Featured Products</h2>
         <Category categoryList={categoryList} filterCategory={filterCategory} />
         <Products items={items} /> */}
-        <Landing />
+        <Link to="/products" state={{items: items}}>
+          <button>sdf</button>
+        </Link>
+        <Outlet />
       </main>
       <footer>
         <form>
@@ -49,7 +51,7 @@ export default function Home() {
             placeholder="email address"
           />
           <input type="submit" value="subscribe" />
-          <p class="copyright">©2022 SOSEKI - All Rights Reserved</p>
+          <p className="copyright">©2022 SOSEKI - All Rights Reserved</p>
         </form>
         <div className="contact-us">
           <div className="social-media">

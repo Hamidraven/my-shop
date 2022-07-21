@@ -1,4 +1,6 @@
 import React from "react";
+import about from "./image/about.jpg";
+import about1 from "./image/about1.jpg";
 
 export default function Landing() {
   return (
@@ -15,7 +17,7 @@ export default function Landing() {
           vintage rock tee. Like individual canvasses - the bold colors spring
           to life with texture, imperfection, and soul.
         </p>
-        <img src="/image/about.jpg" alt="err" />
+        <img src={about} alt="" />
         <p>
           The ink cracks and fades with wear - the fabric gets softer from
           repeated washings. Markings and holes appear, sharing the memories and
@@ -23,7 +25,7 @@ export default function Landing() {
           adds to the overall story. A relic of a time gone by - your personal
           holy grail. These are the fundamentals of Made Worn.
         </p>
-        <img src="./image/about1.jpg" alt="err" />
+        <img src={about1} alt="err" />
         <p>
           Each of our premium tees is first created around the sense of touch.
           Our cotton and fabrics are beaten, sanded, bashed and thrashed to

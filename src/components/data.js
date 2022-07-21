@@ -3,6 +3,7 @@ const products = [
     id: 1,
     category: "classic tees",
     name: "GUNS N' ROSES APPETITE FOR DESTRUCTION DESTROYED TEE",
+    artist: "GUNS N' ROSES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -20,12 +21,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR093DST_600x.jpg?v=1657173845",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR093DSTDETAIL1_600x.jpg?v=1657173845",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR093DSTDETAIL7_600x.jpg?v=1657173845",
     ],
   },
   {
     id: 2,
     category: "classic tees",
     name: "THE B52'S TOUR '92 ACID",
+    artist: "THE B52",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -43,12 +46,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWB52002TACIDFRONT_600x.jpg?v=1656569884",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWB52002TACIDDETAIL1_600x.jpg?v=1656569884",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWB52002TACIDBACK_600x.jpg?v=1656569884",
     ],
   },
   {
     id: 3,
     category: "classic tees",
     name: "STEVIE NICKS '91 TOUR",
+    artist: "STEVIE NICKS",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -66,12 +71,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSN013T_600x.jpg?v=1656396172",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSN013TDETAIL1_600x.jpg?v=1656396172",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSN013TBACK_600x.jpg?v=1656396172",
     ],
   },
   {
     id: 4,
     category: "classic tees",
     name: "JERRY GARCIA TIE DYE",
+    artist: "JERRY GARCIA",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -89,12 +96,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJG001TDFRONT_600x.jpg?v=1655954207",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJG001TDDETAIL1_600x.jpg?v=1655954207",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJG001TDBACK_600x.jpg?v=1655954207",
     ],
   },
   {
     id: 5,
     category: "classic tees",
     name: "BOB MARLEY LIVE IN CONCERT",
+    artist: "BOB MARLEY",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -112,12 +121,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBM054T_600x.jpg?v=1655947621",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBM054TDETAIL2_600x.jpg?v=1655947621",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBM054TDETAIL6_600x.jpg?v=1655947621",
     ],
   },
   {
     id: 6,
     category: "classic tees",
     name: "AC/DC FLICK OF THE SWITCH '83-'84",
+    artist: "AC/DC",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -135,12 +146,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWACDC077TFRONT_600x.jpg?v=1655953900",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWACDC077TDETAIL1_600x.jpg?v=1655953900",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWACDC077TBACK_600x.jpg?v=1655953900",
     ],
   },
   {
     id: 7,
     category: "classic tees",
     name: "THE WHO LONG LIVE ROCK",
+    artist: "THE WHO",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -158,12 +171,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWWH038TFRONT_600x.jpg?v=1655444238",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWWH038TDETAIL1_600x.jpg?v=1655444238",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWWH038TBACK_600x.jpg?v=1655444238",
     ],
   },
   {
     id: 8,
     category: "classic tees",
     name: "IRON MAIDEN WORLDWIDE TOUR",
+    artist: "IRON MAIDEN",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -181,12 +196,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWIM037TFRONT_600x.jpg?v=1655444381",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWIM037TDETAIL1_600x.jpg?v=1655481752",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWIM037TBACK_600x.jpg?v=1655481752",
     ],
   },
   {
     id: 9,
     category: "classic tees",
     name: "PINK FLOYD THE DIVISION BELL",
+    artist: "PINK FLOYD",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -204,12 +221,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPF104TFRONT_600x.jpg?v=1655445156",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPF104TDETAIL1_600x.jpg?v=1655445156",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPF104TBACK_600x.jpg?v=1655445156",
     ],
   },
   {
     id: 10,
     category: "classic tees",
     name: "ALICE COOPER SNAKEBITE DESTROYED TEE",
+    artist: "ALICE COOPER",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -227,12 +246,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWAC021DST_600x.jpg?v=1655445359",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWAC021DSTDETAIL1_600x.jpg?v=1655445359",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWAC021DSTDETAIL3_600x.jpg?v=1655445359",
     ],
   },
   {
     id: 11,
     category: "classic tees",
     name: "MÖTLEY CRÜE FRANKENSTEIN",
+    artist: "MÖTLEY CRÜE",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -250,12 +271,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMC053TFRONT_600x.jpg?v=1654836103",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMC053TDETAIL1_600x.jpg?v=1654836103",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMC053TBACK_600x.jpg?v=1654836103",
     ],
   },
   {
     id: 12,
     category: "classic tees",
     name: "SLAYER BLACK MAGIC DESTROYED TEE",
+    artist: "SLAYER",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -273,12 +296,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSL019DST_600x.jpg?v=1654663910",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSL019DSTDETAIL7_600x.jpg?v=1654663910",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSL019DSTDETAIL6_600x.jpg?v=1654663706",
     ],
   },
   {
     id: 13,
     category: "classic tees",
     name: "LED ZEPPELIN SWAN SONG",
+    artist: "LED ZEPPELIN",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -296,12 +321,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWLZ062TFRONT_600x.jpg?v=1654062148",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWLZ062TDETAIL1_600x.jpg?v=1654062148",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWLZ062TBACK_600x.jpg?v=1654062148",
     ],
   },
   {
     id: 14,
     category: "classic tees",
     name: "BEACH BOYS THE WARMTH OF THE SUN",
+    artist: "BEACH BOYS",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -319,12 +346,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBB046TD_600x.jpg?v=1652852578",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBB046TDDETAIL2_600x.jpg?v=1652852689",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBB046TDDETAIL5_600x.jpg?v=1652852689",
     ],
   },
   {
     id: 15,
     category: "classic tees",
     name: "THE POLICE NORTH AMERICAN TOUR",
+    artist: "THE POLICE",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -342,12 +371,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPE020TFRONT_600x.jpg?v=1650588488",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPE020TDETAIL1_600x.jpg?v=1650588488",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPE020TBACK_600x.jpg?v=1650588488",
     ],
   },
   {
     id: 16,
     category: "classic tees",
     name: "KISS ROCK AND ROLL OVER",
+    artist: "KISS",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -365,12 +396,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWKS063T_600x.jpg?v=1650579706",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWKS063TDETAIL1_600x.jpg?v=1650579706",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWKS063TDETAIL4_600x.jpg?v=1650579706",
     ],
   },
   {
     id: 17,
     category: "classic tees",
     name: "STEVE MILLER BAND IN CONCERT",
+    artist: "STEVE MILLER",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -388,12 +421,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSMB002Tfront2_600x.jpg?v=1650579472",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSMB002TDETAIL1_600x.jpg?v=1650579472",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSMB002TBACK_600x.jpg?v=1650579472",
     ],
   },
   {
     id: 18,
     category: "classic tees",
     name: "TUPAC CALIFORNIA LOVE",
+    artist: "TUPAC",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -411,12 +446,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWTU035T_600x.jpg?v=1650335611",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWTU035TDETAIL1_600x.jpg?v=1650335611",
+      " https://cdn.shopify.com/s/files/1/1409/0868/products/MWTU035TDETAIL4_600x.jpg?v=1650335611",
     ],
   },
   {
     id: 19,
     category: "classic tees",
     name: "ICE CUBE IT WAS A GOOD DAY",
+    artist: "ICE CUBE",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -434,12 +471,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWICE002TDETAIL9_600x.jpg?v=1649739397",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWICE002TDETAIL4_600x.jpg?v=1649739550",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWICE002TDETAIL7_600x.jpg?v=1649739432",
     ],
   },
   {
     id: 20,
     category: "classic tees",
     name: "MOTÖRHEAD DR. ROCK",
+    artist: "MOTÖRHEAD",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -457,12 +496,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMH029TDETAIL4_600x.jpg?v=1649108242",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMH029TDETAIL1_600x.jpg?v=1649108242",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMH029TDETAIL2_600x.jpg?v=1649108240",
     ],
   },
   {
     id: 21,
     category: "classic tees",
     name: "THE DOORS STRANGE DAYS",
+    artist: "THE DOORS",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -480,12 +521,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDO052TDETAIL5_600x.jpg?v=1646962177",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDO052T_600x.jpg?v=1646962191",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDO052TDETAIL1_600x.jpg?v=1646962191",
     ],
   },
   {
     id: 22,
     category: "classic tees",
     name: "NOTORIOUS B.I.G. UNBELIEVABLE",
+    artist: "NOTORIOUS B.I.G",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -503,12 +546,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBIG041T_600x.jpg?v=1646031206",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBIG041TDETAIL1_600x.jpg?v=1646031206",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBIG041TDETAIL2_600x.jpg?v=1646031206",
     ],
   },
   {
     id: 23,
     category: "classic tees",
     name: "MEGADETH ON TOUR",
+    artist: "MEGADETH",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -526,12 +571,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMG005TFRONT_600x.jpg?v=1643092431",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMG005TDETAIL1_600x.jpg?v=1643092431",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMG005TBACK_600x.jpg?v=1643092431",
     ],
   },
   {
     id: 24,
     category: "classic tees",
     name: "BRUCE SPRINGSTEEN BORN IN THE U.S.A. WORLD TOUR",
+    artist: "BRUCE SPRINGSTEEN",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -549,12 +596,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBR001TFRONT_600x.jpg?v=1637043571",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBR001TDETAIL1_600x.jpg?v=1637043571",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBR001TBACK_600x.jpg?v=1637043570",
     ],
   },
   {
     id: 25,
     category: "classic tees",
     name: "PRINCE AND THE REVOLUTION WHEN DOVES CRY",
+    artist: "PRINCE",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -572,12 +621,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPR002T_600x.jpg?v=1635914789",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPR002TDETAIL8_600x.jpg?v=1635914789",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPR002TDETAIL5_600x.jpg?v=1635914789",
     ],
   },
   {
     id: 26,
     category: "crop tees",
     name: "DEF LEPPARD HIGH N' DRY CROP",
+    artist: "DEF LEPPARD",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -595,12 +646,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDL031CPFRONT_600x.jpg?v=1653463372",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDL031CPDETAIL1_600x.jpg?v=1653463372",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDL031CPBACK_600x.jpg?v=1653463372",
     ],
   },
   {
     id: 27,
     category: "crop tees",
     name: "BLONDIE WORLD TOUR 1977 CROP",
+    artist: "BLONDIE",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -618,12 +671,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBL037CP_600x.jpg?v=1647562111",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBL037CPDETAIL1_600x.jpg?v=1647562111",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBL037CPDETAIL4_600x.jpg?v=1647562111",
     ],
   },
   {
     id: 28,
     category: "crop tees",
     name: "JOHN LENNON GIVE PEACE A CHANCE CROP",
+    artist: "JOHN LENNON",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -641,12 +696,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJL027CP_600x.jpg?v=1640845805",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJL027CPDETAIL1_600x.jpg?v=1640845805",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJL027TDETAIL4_27429d85-2c94-459d-a95c-a9201a82183e_600x.jpg?v=1640845805",
     ],
   },
   {
     id: 29,
     category: "crop tees",
     name: "FLEETWOOD MAC LIVE 1980 CROP",
+    artist: "FLEETWOOD",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -664,12 +721,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWFM007CP_600x.jpg?v=1634709453",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWFM007CPDETAIL1_600x.jpg?v=1634709453",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWFM007TDETAIL2_44be9128-740b-4b67-bc08-850d4e143d9e_600x.jpg?v=1634709435",
     ],
   },
   {
     id: 30,
     category: "crop tees",
     name: "DAVID BOWIE STARDUST CROP",
+    artist: "DAVID BOWIE",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -687,12 +746,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDB049CP_600x.jpg?v=1628230059",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDB049CPDETAIL1_600x.jpg?v=1628230059",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDB049TDETAIL2_ab78c4fd-4116-44c9-a949-aaa9476ee885_600x.jpg?v=1628230095",
     ],
   },
   {
     id: 31,
     category: "crop tees",
     name: "AEROSMITH DREAM ON CROP",
+    artist: "AEROSMITH",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -710,12 +771,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/AEROCROPFRONT_600x.jpg?v=1615490622",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/AEROCROPDETAIL2_600x.jpg?v=1615490621",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/AEROCROPBACK_600x.jpg?v=1615490620",
     ],
   },
   {
     id: 32,
     category: "crop tees",
     name: "MICHAEL JACKSON THRILLER CROP",
+    artist: "MICHAEL JACKSON",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -733,12 +796,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJ001CP_600x.jpg?v=1594340264",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJ001CPDETAIL1_600x.jpg?v=1594340265",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWJ001CPDETAIL2_600x.jpg?v=1594340265",
     ],
   },
   {
     id: 33,
     category: "crop tees",
     name: "POISON OPEN UP AND SAY AHH! CROP",
+    artist: "POISON",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -756,12 +821,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPN003CP_600x.jpg?v=1588017458",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPN003CPDETAIL1_600x.jpg?v=1588017471",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWPN003TDETAIL2_c9de7823-7276-4f33-b20c-8cefb3f7106d_600x.jpg?v=1588017471",
     ],
   },
   {
     id: 34,
     category: "crop tees",
     name: "METALLICA SKULL ON FIRE CROP",
+    artist: "METALLICA",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -779,12 +846,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWM060CP-2_600x.jpg?v=1585856639",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWM060CPDETAIL2-2_600x.jpg?v=1585856639",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWM060CPDETAIL1_600x.jpg?v=1585856639",
     ],
   },
   {
     id: 35,
     category: "crop tees",
     name: "QUEEN FREDDIE CROP",
+    artist: "QUEEN",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -802,12 +871,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWQ002CP_600x.jpg?v=1585202143",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWQ002CPDETAIL1_600x.jpg?v=1585202143",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWQ002CPDETAIL3_600x.jpg?v=1585202143",
     ],
   },
   {
     id: 36,
     category: "crop tees",
     name: "MISFITS FIEND CLUB CROP",
+    artist: "MISFITS",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -825,12 +896,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMF020CP_600x.jpg?v=1576101626",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMF020CPDETAIL2_600x.jpg?v=1576101626",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWMF020CPDETAIL1_600x.jpg?v=1576101626",
     ],
   },
   {
     id: 37,
     category: "crop tees - sweatshirt",
     name: "ROLLING STONES ZIP CROPPED SWEATSHIRT",
+    artist: "ROLLING STONES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -873,12 +946,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWHD038LT_600x.jpg?v=1601759738",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWHD038LTDETAIL1_600x.jpg?v=1601759766",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWHD038LTDETAL3_600x.jpg?v=1601759766",
     ],
   },
   {
     id: 39,
     category: "tank tops",
     name: "WILLIE NELSON FLOWERS LACE TANK",
+    artist: "WILLIE NELSON",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -896,12 +971,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWWN009LT_600x.jpg?v=1578360755",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWWN009LTDETAIL1_600x.jpg?v=1578360750",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWWN009LTDETAIL2.2_600x.jpg?v=1578360755",
     ],
   },
   {
     id: 40,
     category: "tank tops",
     name: "THE DOORS IN CONCERT CUT TANK",
+    artist: "THE DOORS",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -919,12 +996,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDO028OS_600x.jpg?v=1576545328",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDO028OSDETAIL1_600x.jpg?v=1576545445",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDO028OSDETAIL2.2_600x.jpg?v=1576545445",
     ],
   },
   {
     id: 41,
     category: "longsleeves tees",
     name: "RAMONES GABBA GABBA HEY LONGSLEEVE",
+    artist: "RAMONES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -942,12 +1021,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWR064LS_600x.jpg?v=1643953117",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWR064LSDETAIL1_600x.jpg?v=1643953135",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWR064LSDETAIL3_600x.jpg?v=1643953135",
     ],
   },
   {
     id: 42,
     category: "longsleeves tees",
     name: "METALLICA RULZ LONGSLEEVE",
+    artist: "METALLICA",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -988,12 +1069,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBS042LS2_600x.jpg?v=1588891287",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBS042LSDETAIL1_600x.jpg?v=1588891287",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWM068LSDETAIL2_600x.jpg?v=1593191581",
     ],
   },
   {
     id: 44,
     category: "longsleeves tees",
     name: "ANTHRAX U4EEAAH LONGSLEEVE",
+    artist: "ANTHRAX",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1011,12 +1094,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWAX002LS_600x.jpg?v=1587761132",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWAX002LSDETAIL1_600x.jpg?v=1587761135",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWAX002LSDETAIL2_600x.jpg?v=1587761135",
     ],
   },
   {
     id: 45,
     category: "longsleeves tees",
     name: "GUNS 'N ROSES SHIELD LONGSLEEVE",
+    artist: "GUNS 'N ROSES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1034,12 +1119,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR070LS-1_600x.jpg?v=1573503989",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR070LSDETAIL4-1_600x.jpg?v=1573503989",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR070LSDETAIL1-1_600x.jpg?v=1573503989",
     ],
   },
   {
     id: 46,
     category: "longsleeves tees",
     name: "BOB MARLEY SONGS OF FREEDOM LONGSLEEVE",
+    artist: "BOB MARLEY",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1057,12 +1144,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBM043LS_600x.jpg?v=1576864976",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBM043LSDETAIL1_600x.jpg?v=1576865026",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWBM043LSDETAIL3_600x.jpg?v=1576865026",
     ],
   },
   {
     id: 47,
     category: "classic sweatshirts",
     name: "GRATEFUL DEAD BEAR'S CHOICE CLASSIC CREW SWEATSHIRT TIE DYE",
+    artist: "GRATEFUL DEAD",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1080,12 +1169,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGD141CSWTIEDYE_600x.jpg?v=1645685138",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGD141CSWTIEDYEDETAIL1_600x.jpg?v=1645685138",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGD141CSWTIEDYEDETAIL3_600x.jpg?v=1645685138",
     ],
   },
   {
     id: 48,
     category: "classic sweatshirts",
     name: "AC/DC HIGHWAY TO HELL BOLT SWEATSHIRT",
+    artist: "AC/DC",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1103,12 +1194,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWACDC040SW_600x.jpg?v=1637776637",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWACDC040SWDETAIL1_600x.jpg?v=1637776637",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWACDC040SWDETAIL4_600x.jpg?v=1637776637",
     ],
   },
   {
     id: 49,
     category: "classic sweatshirts",
     name: "DAVID BOWIE ALADDIN SANE SWEATSHIRT",
+    artist: "DAVID BOWIE",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1126,12 +1219,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDB031SW_600x.jpg?v=1637782060",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDB031SWDETAIL1_600x.jpg?v=1637782077",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWDB031SWDETAIL3_600x.jpg?v=1637782077",
     ],
   },
   {
     id: 50,
     category: "classic sweatshirts",
     name: "RAMONES ROCKAWAY BEACH SWEATSHIRT",
+    artist: "RAMONES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1149,12 +1244,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWR054SW_600x.jpg?v=1637778159",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWR054SWDETAIL1_600x.jpg?v=1637778198",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWR054SWDETAIL2_600x.jpg?v=1637778198",
     ],
   },
   {
     id: 51,
     category: "classic sweatshirts",
     name: "SEX PISTOLS NO FUTURE SWEATSHIRT",
+    artist: "SEX PISTOLS",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1172,12 +1269,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSP005SW_600x.jpg?v=1588101398",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSP005SWDETAIL1_600x.jpg?v=1588101404",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSP005SWDETAIL4_600x.jpg?v=1588101404",
     ],
   },
   {
     id: 52,
     category: "classic sweatshirts",
     name: "N.W.A. EAZY-E CREW FLEECE",
+    artist: "N.W.A.",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1195,12 +1294,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWNWA017SW_600x.jpg?v=1572983443",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWNWA017SWDETAIL-2_600x.jpg?v=1572983443",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWNWA017SWDETAIL-1_600x.jpg?v=1572983443",
     ],
   },
   {
     id: 53,
     category: "oversized hoodies",
     name: "SUBLIME 40 OZ. TO FREEDOM OVERSIZED HOODED SWEATSHIRT",
+    artist: "SUBLIME",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1218,12 +1319,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSUB001OHD.1_600x.jpg?v=1642726492",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSUB00OHDDETAIL1_600x.jpg?v=1642726492",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWSUB00OHDDETAIL3_600x.jpg?v=1642726492",
     ],
   },
   {
     id: 54,
     category: "oversized hoodies",
     name: "GUNS N' ROSES OVERSIZED HOODED SWEATSHIRT",
+    artist: "GUNS N' ROSES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1241,12 +1344,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/GNRHEAVYFLEECEFRONT4_600x.jpg?v=1573512060",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR082OHDDETAIL1-1_600x.jpg?v=1573512060",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWGR082OHDBACK2_600x.jpg?v=1573512060",
     ],
   },
   {
     id: 55,
     category: "oversized hoodies",
     name: "METALLICA WORLD TOUR OVERSIZED HOODED SWEATSHIRT",
+    artist: "METALLICA",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1264,12 +1369,14 @@ const products = [
     image: [
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWM085OHDFRONT-2_600x.jpg?v=1586370600",
       "https://cdn.shopify.com/s/files/1/1409/0868/products/MWM085OHDDETAIL1_600x.jpg?v=1586370600",
+      "https://cdn.shopify.com/s/files/1/1409/0868/products/MWM085OHDBACK_600x.jpg?v=1586370600",
     ],
   },
   {
     id: 56,
     category: "oversized hoodies",
     name: "GUNS N' ROSES HERE TODAY...GONE TO HELL OVERSIZED HOODED SWEATSHIRT",
+    artist: "GUNS N' ROSES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1294,6 +1401,7 @@ const products = [
     id: 57,
     category: "one of a kind",
     name: "GUNS N' ROSES HERE TODAY...GONE TO HELL OVERSIZED HOODED SWEATSHIRT",
+    artist: "GUNS N' ROSES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1320,6 +1428,7 @@ const products = [
     id: 58,
     category: "one of a kind",
     name: "ROLLING STONES DRAGON HAND PAINTED JACKET",
+    artist: "ROLLING STONES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1344,6 +1453,7 @@ const products = [
     id: 59,
     category: "one of a kind",
     name: "METALLICA JUMP IN THE FIRE DENIM JACKET",
+    artist: "METALLICA",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1370,6 +1480,7 @@ const products = [
     id: 60,
     category: "one of a kind",
     name: "GUNS N' ROSES PARADISE CITY LEATHER VEST",
+    artist: "GUNS N' ROSES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1395,6 +1506,7 @@ const products = [
     id: 61,
     category: "one of a kind",
     name: "AC/DC WHO MADE WHO DENIM JACKET",
+    artist: "AC/DC",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1418,6 +1530,7 @@ const products = [
     id: 62,
     category: "flannel",
     name: "RAMONES PATCHWORK FLANNEL",
+    artist: "RAMONES",
     availableSizes: {
       xs: Math.floor(Math.random() * 9),
       s: Math.floor(Math.random() * 8),
@@ -1443,6 +1556,7 @@ const products = [
     id: 63,
     category: "accessories",
     name: "ROLLING STONES NECKERCHIEF",
+    artist: "ROLLING STONES",
     price: 95.0,
     color: "OFF WHITE / VINTAGE BLACK",
     material: "100% silk",
@@ -1458,6 +1572,7 @@ const products = [
     id: 64,
     category: "accessories",
     name: "GRATEFUL DEAD NECKERCHIEF",
+    artist: "GRATEFUL DEAD",
     price: 95.0,
     color: "OFF WHITE / VINTAGE BLACK",
     material: "100% silk",

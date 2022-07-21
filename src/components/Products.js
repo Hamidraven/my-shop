@@ -1,5 +1,6 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
+import products from "./data";
 
 export const Products = ({ items }) => {
   return (
@@ -11,7 +12,7 @@ export const Products = ({ items }) => {
             <article key={id}>
               <div className="image-container">
                 <div className="backdrop-filter"></div>
-                <img src={image[0]} alt={name}/>
+                <img src={image[0]} alt={name} />
               </div>
               <div className="details">
                 <h4>{name}</h4>
