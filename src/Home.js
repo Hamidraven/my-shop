@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import products from "./components/data";
-
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import Category from "./components/Category";
 import Nav from "./components/Nav";
 import Landing from "./Landing";
-import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import products from "./components/data";
 
 // const categoryList = [
 //   "all",
@@ -36,8 +35,8 @@ export default function Home() {
         {/* <h2 className="featured">Featured Products</h2>
         <Category categoryList={categoryList} filterCategory={filterCategory} />
         <Products items={items} /> */}
-        <Link to="/products" state={{items: items}}>
-          <button>sdf</button>
+        <Link to="/products" state={{ items: items }}>
+          shop
         </Link>
         <Outlet />
       </main>
@@ -47,7 +46,7 @@ export default function Home() {
           <input
             type="text"
             id="email-list"
-            for="email-list"
+            htmlFor="email-list"
             placeholder="email address"
           />
           <input type="submit" value="subscribe" />

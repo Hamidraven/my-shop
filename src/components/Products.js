@@ -1,15 +1,16 @@
 import { React } from "react";
-import { Link } from "react-router-dom";
-import products from "./data";
+import { Link, useLocation } from "react-router-dom";
 
-export const Products = ({ items }) => {
+export const Products = () => {
+  const items = useLocation().state.items;
+
   return (
     <div className="products-list">
       {items.map((item) => {
         const { id, name, price, image } = item;
         return (
-          <Link to={`/products/${id}`}>
-            <article key={id}>
+          <Link to={`/products/${id}`} key={id}>
+            <article>
               <div className="image-container">
                 <div className="backdrop-filter"></div>
                 <img src={image[0]} alt={name} />
