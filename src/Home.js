@@ -35,7 +35,7 @@ export default function Home() {
         {/* <h2 className="featured">Featured Products</h2>
         <Category categoryList={categoryList} filterCategory={filterCategory} />
         <Products items={items} /> */}
-        <Link to="/products" state={{ items: items }}>
+        <Link to="/products" state={{ items: items }} >
           shop
         </Link>
         <Outlet />

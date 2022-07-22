@@ -5,22 +5,25 @@ const Category = ({ categoryList, filterCategory }) => {
   const [active, isActive] = useState(false);
 
   const handleClick = () => {
-    isActive(active => !active);
+    isActive((active) => !active);
   };
+
+
+  const mobileHeight = window.innerWidth < 768 && active;
 
   return (
     <div className="category-list">
       <button className="bar" onClick={handleClick}>
         <GiHamburgerMenu style={{ fontSize: 30 }} />
       </button>
-      <ul className="category-list" style={{ height: active ? "25ch" : 0 }}>
+      <ul className="category-list" style={{ height: mobileHeight && "25ch" }}>
         {categoryList.map((category, index) => {
           return (
-              <li key={index} onClick={() => filterCategory(category)}>
-                <button key={index} onClick={() => filterCategory(category)}>
-                  {category}
-                </button>
-              </li>
+            <li key={index} onClick={() => filterCategory(category)}>
+              <button key={index} onClick={() => filterCategory(category)}>
+                {category}
+              </button>
+            </li>
           );
         })}
       </ul>

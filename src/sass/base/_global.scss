@@ -36,3 +36,21 @@ h2.featured {
   display: grid;
   place-items: center;
 }
+
+.shop {
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 3fr 12fr;
+    .category-list {
+      grid-column: 1 / 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      border: 1px solid black;
+      ul {
+        height: 55ch;
+      }
+    }
+  }
+}
