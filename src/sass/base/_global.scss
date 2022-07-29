@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Roboto:wght@100&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Whisper&display=swap");
 
+#root {
+  position: relative;
+  overflow-x: hidden;
+}
+
 header {
   width: 100vw;
   height: 100vh;
@@ -23,6 +28,14 @@ header {
       height: 100vh;
       filter: sepia(60%);
     }
+  }
+  h1 {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+    backdrop-filter: grayscale(50%);
+    font-size: 5rem;
   }
 }
 h2.featured {
@@ -48,9 +61,42 @@ h2.featured {
       align-items: center;
       justify-content: flex-start;
       border: 1px solid black;
+      width: 100%;
       ul {
         height: 55ch;
       }
+      .bar {
+        &:hover {
+          transform: none;
+        }
+        &:active {
+          transform: none;
+        }
+      }
     }
+  }
+}
+
+.main {
+  margin-inline: 1.5rem;
+  margin-block: 3.5rem;
+  .start-shopping {
+    background: url(../src/image/shopping.jpg);
+    background-size: cover;
+    height: 35vh;
+    margin-bottom: 1.5rem;
+    p {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      backdrop-filter: grayscale(60%);
+      font-size: 2rem;
+      color: black;
+    }
+  }
+  .our-story {
+    display: grid;
+    gap: 1.5rem;
   }
 }

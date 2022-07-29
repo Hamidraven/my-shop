@@ -46,8 +46,18 @@ const Item = () => {
             {sizeList.map((size) => {
               return (
                 <li key={size.key}>
-                  <input type="radio" name="size" value={size.key}/>
-                  <label htmlFor={size.key}>{size.key.toUpperCase()}</label>
+                  <input
+                    type="radio"
+                    name="size"
+                    value={size.key}
+                    disabled={size.value == 0 && true}
+                  />
+                  <label
+                    htmlFor={size.key}
+                    style={{ color: size.value == 0 && "gray" }}
+                  >
+                    {size.key.toUpperCase()}
+                  </label>
                 </li>
               );
             })}

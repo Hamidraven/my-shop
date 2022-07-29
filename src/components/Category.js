@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FaPlus } from "react-icons/fa";
 
 const Category = ({ categoryList, filterCategory }) => {
   const [active, isActive] = useState(false);
@@ -8,13 +8,13 @@ const Category = ({ categoryList, filterCategory }) => {
     isActive((active) => !active);
   };
 
-
   const mobileHeight = window.innerWidth < 768 && active;
 
   return (
     <div className="category-list">
       <button className="bar" onClick={handleClick}>
-        <GiHamburgerMenu style={{ fontSize: 30 }} />
+        Filter
+        <FaPlus style={{ fontSize: 15, marginLeft: 5 }} />
       </button>
       <ul className="category-list" style={{ height: mobileHeight && "25ch" }}>
         {categoryList.map((category, index) => {

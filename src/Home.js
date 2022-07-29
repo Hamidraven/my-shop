@@ -1,43 +1,30 @@
-import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
-import Category from "./components/Category";
 import Nav from "./components/Nav";
-import Landing from "./Landing";
-import products from "./components/data";
-
-// const categoryList = [
-//   "all",
-//   ...new Set(products.map((product) => product.category)),
-// ];
 
 export default function Home() {
-  const [items, setItems] = useState(products);
-
-  // const filterCategory = (category) => {
-  //   if (category === "all") {
-  //     setItems(products);
-  //     return;
-  //   }
-
-  //   const newCategory = products.filter((item) => item.category === category);
-  //   setItems(newCategory);
-  //   console.log(category);
-  // };
+  const [page, setPage] = useState("");
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname.includes("products")) {
+      setPage(() => "Products");
+    } else {
+      setPage(() => "");
+    }
+  }, [location]);
 
   return (
     <div>
       <header>
         <Nav />
         <div className="background-filter"></div>
+        <h1>{page}</h1>
       </header>
       <main>
         {/* <h2 className="featured">Featured Products</h2>
         <Category categoryList={categoryList} filterCategory={filterCategory} />
         <Products items={items} /> */}
-        <Link to="/products" state={{ items: items }} >
-          shop
-        </Link>
         <Outlet />
       </main>
       <footer>

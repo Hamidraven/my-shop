@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import about from "./image/about.jpg";
 import about1 from "./image/about1.jpg";
+import { Link } from "react-router-dom";
+import products from "./components/data";
 
 export default function Landing() {
+  const [items, setItems] = useState(products);
   return (
     <div className="main">
-      <div className="new-release">
-        <p>NEW RELEASES</p>
-      </div>
-      <h2 className="featured">-Featured Products-</h2>
-      <div className="one-kind">ONE OF A KIND</div>
+      <Link
+        to="/products"
+        state={{ items: items }}
+        style={{ textDecoration: "none" }}
+      >
+        <div className="start-shopping">
+          <p>start shopping</p>
+        </div>
+      </Link>
       <div className="our-story">
         <p>
           MadeWorn was founded around the idea that not all garments are created
