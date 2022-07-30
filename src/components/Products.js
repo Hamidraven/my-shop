@@ -57,7 +57,11 @@ export const Products = () => {
         {items.map((item) => {
           const { id, name, price, image } = item;
           return (
-            <Link to={`/products/${id}`} key={id}>
+            <Link
+              to={`/products/${id}`}
+              key={id}
+              style={{ color: "black", textDecoration: "none" }}
+            >
               <article>
                 <div className="image-container">
                   <div className="backdrop-filter"></div>
@@ -72,11 +76,13 @@ export const Products = () => {
           );
         })}
       </div>
-      {!loading ? (
-        <button onClick={() => loadMore()}>load more</button>
-      ) : (
-        <Loading />
-      )}
+      <div className="button-load">
+        {!loading ? (
+          <button onClick={() => loadMore()}>load more</button>
+        ) : (
+          <Loading />
+        )}
+      </div>
     </div>
   );
 };

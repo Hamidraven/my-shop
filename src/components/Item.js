@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 import products from "./data";
 
@@ -22,6 +22,7 @@ const Item = () => {
   for (const [key, value] of Object.entries(availableSizes)) {
     sizeList.push({ key, value });
   }
+  const [selected, setSelected] = useState(false);
 
   return (
     <div className="product">
@@ -51,6 +52,7 @@ const Item = () => {
                     name="size"
                     value={size.key}
                     disabled={size.value == 0 && true}
+                    onClick={() => setSelected(() => true)}
                   />
                   <label
                     htmlFor={size.key}
@@ -61,7 +63,7 @@ const Item = () => {
                 </li>
               );
             })}
-            <button type="submit" className="submit-btn">
+            <button type="submit" className="submit-btn" disabled={!selected}>
               add to cart
             </button>
           </form>

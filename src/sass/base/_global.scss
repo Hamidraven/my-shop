@@ -1,4 +1,8 @@
+//SHADOW INTO LIGHT FONT
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Roboto:wght@100&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Whisper&display=swap");
+
+//IM Fell Great Primer
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=IM+Fell+Great+Primer:ital@0;1&family=Roboto:wght@100&family=Rock+Salt&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Whisper&display=swap");
 
 #root {
   position: relative;
@@ -34,9 +38,11 @@ header {
     width: 100%;
     top: 45%;
     text-align: center;
-    backdrop-filter: grayscale(50%);
     font-size: 5rem;
     z-index: 1;
+    color: black;
+    background: #aaaaaa;
+    backdrop-filter: opacity(30%);
   }
 }
 h2.featured {
@@ -51,40 +57,19 @@ h2.featured {
   place-items: center;
 }
 
-.shop {
-  @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 3fr 12fr;
-    .category-list {
-      grid-column: 1 / 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      border: 1px solid black;
-      width: 100%;
-      ul {
-        height: 55ch;
-      }
-      .bar {
-        &:hover {
-          transform: none;
-        }
-        &:active {
-          transform: none;
-        }
-      }
-    }
-  }
-}
-
 .main {
-  margin-inline: 1.5rem;
+  margin-inline: 1rem;
   margin-block: 3.5rem;
+  * {
+    margin-inline: auto;
+  }
+  img {
+    width: 100%;
+  }
   .start-shopping {
     background: url(../src/image/shopping.jpg);
     background-size: cover;
-    height: 35vh;
+    height: 45vh;
     margin-bottom: 1.5rem;
     p {
       height: 100%;
@@ -98,6 +83,46 @@ h2.featured {
   }
   .our-story {
     display: grid;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    line-height: 2
+  }
+  @media (min-width: 768px) {
+    margin-inline: 3.5rem;
+  }
+  @media (min-width: 992px) {
+    margin-inline: 6rem;
+  }
+  font-family: "IM Fell Great Primer", serif;
+  .feautered-products {
+    text-align: center;
+    > h4 {
+      margin-block: 2.5rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      .image-container {
+        position: relative;
+        margin-bottom: 0.75rem;
+        .backdrop-filter {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 2;
+          transition: all 0.25s linear;
+          cursor: pointer;
+          &:hover {
+            backdrop-filter: brightness(120%);
+          }
+          &:active {
+            backdrop-filter: brightness(90%);
+          }
+        }
+      }
+    }
   }
 }

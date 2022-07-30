@@ -21,7 +21,7 @@ export default function Home() {
       <header>
         <Nav />
         <div className="background-filter"></div>
-        <h1>{page}</h1>
+        <h1 style={{ fontFamily: "Shadows Into Light, serif" }}>{page}</h1>
       </header>
       <main>
         {/* <h2 className="featured">Featured Products</h2>

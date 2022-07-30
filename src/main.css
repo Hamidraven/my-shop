@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Roboto:wght@100&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Whisper&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=IM+Fell+Great+Primer:ital@0;1&family=Roboto:wght@100&family=Rock+Salt&family=Shadows+Into+Light&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Whisper&display=swap");
 *,
 *::before,
 *::after {
@@ -247,10 +248,12 @@ header h1 {
   width: 100%;
   top: 45%;
   text-align: center;
-  -webkit-backdrop-filter: grayscale(50%);
-          backdrop-filter: grayscale(50%);
   font-size: 5rem;
   z-index: 1;
+  color: black;
+  background: #aaaaaa;
+  -webkit-backdrop-filter: opacity(30%);
+          backdrop-filter: opacity(30%);
 }
 
 h2.featured {
@@ -266,55 +269,24 @@ h2.featured {
   place-items: center;
 }
 
-@media (min-width: 768px) {
-  .shop {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 3fr 12fr;
-        grid-template-columns: 3fr 12fr;
-  }
-  .shop .category-list {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    border: 1px solid black;
-    width: 100%;
-  }
-  .shop .category-list ul {
-    height: 55ch;
-  }
-  .shop .category-list .bar:hover {
-    -webkit-transform: none;
-            transform: none;
-  }
-  .shop .category-list .bar:active {
-    -webkit-transform: none;
-            transform: none;
-  }
+.main {
+  margin-inline: 1rem;
+  margin-block: 3.5rem;
+  font-family: "IM Fell Great Primer", serif;
 }
 
-.main {
-  margin-inline: 1.5rem;
-  margin-block: 3.5rem;
+.main * {
+  margin-inline: auto;
+}
+
+.main img {
+  width: 100%;
 }
 
 .main .start-shopping {
   background: url(../src/image/shopping.jpg);
   background-size: cover;
-  height: 35vh;
+  height: 45vh;
   margin-bottom: 1.5rem;
 }
 
@@ -333,7 +305,64 @@ h2.featured {
 .main .our-story {
   display: -ms-grid;
   display: grid;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+  line-height: 2;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin-inline: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    margin-inline: 6rem;
+  }
+}
+
+.main .feautered-products {
+  text-align: center;
+}
+
+.main .feautered-products > h4 {
+  margin-block: 2.5rem;
+}
+
+.main .feautered-products .products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.main .feautered-products .products .image-container {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.main .feautered-products .products .image-container .backdrop-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  -webkit-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+
+.main .feautered-products .products .image-container .backdrop-filter:hover {
+  -webkit-backdrop-filter: brightness(120%);
+          backdrop-filter: brightness(120%);
+}
+
+.main .feautered-products .products .image-container .backdrop-filter:active {
+  -webkit-backdrop-filter: brightness(90%);
+          backdrop-filter: brightness(90%);
 }
 
 nav {
@@ -468,7 +497,53 @@ nav .nav li {
   right: 0 !important;
 }
 
-.products-list {
+@media (min-width: 768px) {
+  .shop {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3fr 12fr;
+        grid-template-columns: 3fr 12fr;
+  }
+  .shop .category-list {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    border: 1px solid black;
+    width: 100%;
+  }
+  .shop .category-list ul {
+    height: 55ch;
+  }
+  .shop .category-list .bar:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .shop .category-list .bar:active {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .shop .button-load {
+    grid-column: 2 / -1;
+    width: 10rem;
+    height: 3rem;
+    margin-inline: auto;
+  }
+}
+
+.shop .products-list {
   border-top: 1px solid;
   padding-block: 1.5rem;
   margin-inline: 1.5rem;
@@ -478,12 +553,13 @@ nav .nav li {
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-column-gap: 0.5rem;
-          column-gap: 0.5rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
   row-gap: 2rem;
+  font-family: "IM Fell Great Primer", serif;
 }
 
-.products-list article {
+.shop .products-list article {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -492,11 +568,11 @@ nav .nav li {
   gap: 1rem;
 }
 
-.products-list article .image-container {
+.shop .products-list article .image-container {
   position: relative;
 }
 
-.products-list article .image-container .backdrop-filter {
+.shop .products-list article .image-container .backdrop-filter {
   position: absolute;
   top: 0;
   left: 0;
@@ -505,20 +581,24 @@ nav .nav li {
   z-index: 2;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
+  -webkit-box-shadow: 5px 5px 10px 5px gray;
+          box-shadow: 5px 5px 10px 5px gray;
   cursor: pointer;
 }
 
-.products-list article .image-container .backdrop-filter:hover {
+.shop .products-list article .image-container .backdrop-filter:hover {
   -webkit-backdrop-filter: brightness(120%);
           backdrop-filter: brightness(120%);
 }
 
-.products-list article .image-container .backdrop-filter:active {
+.shop .products-list article .image-container .backdrop-filter:active {
   -webkit-backdrop-filter: brightness(90%);
           backdrop-filter: brightness(90%);
+  -webkit-box-shadow: initial;
+          box-shadow: initial;
 }
 
-.products-list article .details {
+.shop .products-list article .details {
   text-align: center;
 }
 
@@ -698,8 +778,6 @@ nav .nav li {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
 .product .size-list form li label {
@@ -710,8 +788,6 @@ nav .nav li {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
 .product .size-list form li input:checked + label {
@@ -721,10 +797,33 @@ nav .nav li {
 .product .size-list form .submit-btn {
   position: absolute;
   top: 100%;
+  background: transparent;
+}
+
+.product .size-list form .submit-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -0.6rem;
+  top: -0.5rem;
+  z-index: -1;
+  background-color: #f7567c;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.product .size-list form .submit-btn:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.product .size-list form .submit-btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 footer {
-  margin: 0.5rem;
   border-radius: 15px;
   margin-top: 2.5rem;
 }
@@ -793,7 +892,7 @@ footer .footer-nav ul li + li {
 .loader {
   margin: 0 auto;
   width: 100%;
-  height: 100px;
+  height: 80px;
   font-size: 1rem;
   border: 1px solid black;
   display: -webkit-box;
@@ -808,8 +907,8 @@ footer .footer-nav ul li + li {
   height: 100%;
   width: 8px;
   margin-left: 2px;
-  -webkit-animation: delay 0.8s infinite ease-in-out;
-  animation: delay 0.8s infinite ease-in-out;
+  -webkit-animation: delay 1s infinite ease-in-out;
+  animation: delay 1s infinite ease-in-out;
 }
 
 .loader .bar1 {

@@ -1,37 +1,73 @@
-.products-list {
-  border-top: 1px solid;
-  padding-block: 1.5rem;
-  margin-inline: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  justify-content: space-around;
-  column-gap: 0.5rem;
-  row-gap: 2rem;
-  article {
+.shop {
+  @media (min-width: 768px) {
     display: grid;
-    justify-content:center;
-    gap: 1rem;
-    .image-container {
-      position: relative;
-      .backdrop-filter {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 2;
-        transition: all 0.25s linear;
-        cursor: pointer;
+    grid-template-columns: 3fr 12fr;
+    .category-list {
+      grid-column: 1 / 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      border: 1px solid black;
+      width: 100%;
+      ul {
+        height: 55ch;
+      }
+      .bar {
         &:hover {
-          backdrop-filter: brightness(120%);
+          transform: none;
         }
         &:active {
-          backdrop-filter: brightness(90%);
+          transform: none;
         }
       }
     }
-    .details {
-      text-align: center;
+    .button-load {
+      grid-column: 2 / -1;
+      width: 10rem;
+      height: 3rem;
+      margin-inline: auto;
+    }
+  }
+
+  .products-list {
+    border-top: 1px solid;
+    padding-block: 1.5rem;
+    margin-inline: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    justify-content: space-around;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+    font-family: "IM Fell Great Primer", serif;
+    article {
+      display: grid;
+      justify-content: center;
+      gap: 1rem;
+      .image-container {
+        position: relative;
+        .backdrop-filter {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 2;
+          transition: all 0.25s linear;
+          box-shadow: 5px 5px 10px 5px gray;
+          cursor: pointer;
+          &:hover {
+            backdrop-filter: brightness(120%);
+          }
+          &:active {
+            backdrop-filter: brightness(90%);
+            box-shadow: initial;
+          }
+        }
+      }
+      .details {
+        text-align: center;
+      }
     }
   }
 }
