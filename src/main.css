@@ -250,6 +250,7 @@ header h1 {
   -webkit-backdrop-filter: grayscale(50%);
           backdrop-filter: grayscale(50%);
   font-size: 5rem;
+  z-index: 1;
 }
 
 h2.featured {
@@ -415,7 +416,7 @@ nav .utilities a + a {
 }
 
 nav .nav {
-  position: absolute;
+  position: fixed;
   width: 50vw;
   height: 100vh;
   background: powderblue;
@@ -787,5 +788,85 @@ footer .footer-nav ul {
 
 footer .footer-nav ul li + li {
   margin-left: 1rem;
+}
+
+.loader {
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+  font-size: 1rem;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loader > div {
+  height: 100%;
+  width: 8px;
+  margin-left: 2px;
+  -webkit-animation: delay 0.8s infinite ease-in-out;
+  animation: delay 0.8s infinite ease-in-out;
+}
+
+.loader .bar1 {
+  background-color: #754fa0;
+}
+
+.loader .bar2 {
+  background-color: #09b7bf;
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.loader .bar3 {
+  background-color: #90d36b;
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.loader .bar4 {
+  background-color: #f2d40d;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.loader .bar5 {
+  background-color: #fcb12b;
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.loader .bar6 {
+  background-color: #ed1b72;
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+@-webkit-keyframes delay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.05);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes delay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.05);
+    -webkit-transform: scaleY(0.05);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,20 +2,19 @@ import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Category from "./Category";
 import products from "./data";
+import Loading from "./Loading";
 
 export const Products = () => {
   const [items, setItems] = useState(products);
   const [numberOfItems, setNumberOfItems] = useState(8);
   const [filter, setFilter] = useState([]);
-  const [loading, setLoading] = useState(false)
-
+  const [loading, setLoading] = useState(false);
 
   //JS NUGGET FOR UNIQUE PROPERTIES
   const categoryList = [
     "all",
     ...new Set(products.map((product) => product.category)),
   ];
-
 
   //FILTER CATEGORY OF PRODUCTS
   const filterCategory = (category) => {
@@ -31,7 +30,6 @@ export const Products = () => {
     console.log(newCategory);
   };
 
-
   //load more items on click
   useEffect(() => {
     if (filter.length === 0) {
@@ -43,10 +41,13 @@ export const Products = () => {
     }
   }, [numberOfItems]);
 
-
   //click to load 4 more items
   const loadMore = () => {
-    setNumberOfItems((e) => e + 4);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setNumberOfItems((e) => e + 4);
+    }, 2000);
   };
 
   return (
@@ -71,7 +72,11 @@ export const Products = () => {
           );
         })}
       </div>
-      {!loading ? <button onClick={() => loadMore()}>load more</button> : "hel"}
+      {!loading ? (
+        <button onClick={() => loadMore()}>load more</button>
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };

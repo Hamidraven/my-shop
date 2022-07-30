@@ -9,6 +9,8 @@ export default function Home() {
   useEffect(() => {
     if (location.pathname.includes("products")) {
       setPage(() => "Products");
+    } else if (location.pathname.includes("about")) {
+      setPage(() => "About");
     } else {
       setPage(() => "");
     }
