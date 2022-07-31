@@ -2,16 +2,18 @@
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 3fr 12fr;
-    .category-list {
+    div.category-list {
       grid-column: 1 / 2;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      border: 1px solid black;
+      border-right: 1px solid black;
       width: 100%;
+      position: relative;
+      height: 1000px;
       ul {
-        height: 55ch;
+        height: initial;
       }
       .bar {
         &:hover {

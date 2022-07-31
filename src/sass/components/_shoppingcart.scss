@@ -1,0 +1,23 @@
+.shopping-container {
+  position: absolute;
+  inset: 0 0 0 0;
+  background: white;
+  .cart {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background: powderblue;
+    float: right;
+    .added {
+      border: 1px solid black;
+      text-align: center;
+      position: relative;
+      padding-block: 1rem;
+      .icon {
+        position: absolute;
+        top: 50%;
+        transform: translate(1000%, -40%)
+      }
+    }
+  }
+}

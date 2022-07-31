@@ -504,7 +504,7 @@ nav .nav li {
     -ms-grid-columns: 3fr 12fr;
         grid-template-columns: 3fr 12fr;
   }
-  .shop .category-list {
+  .shop div.category-list {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
@@ -521,17 +521,19 @@ nav .nav li {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    border: 1px solid black;
+    border-right: 1px solid black;
     width: 100%;
+    position: relative;
+    height: 1000px;
   }
-  .shop .category-list ul {
-    height: 55ch;
+  .shop div.category-list ul {
+    height: initial;
   }
-  .shop .category-list .bar:hover {
+  .shop div.category-list .bar:hover {
     -webkit-transform: none;
             transform: none;
   }
-  .shop .category-list .bar:active {
+  .shop div.category-list .bar:active {
     -webkit-transform: none;
             transform: none;
   }
@@ -606,6 +608,7 @@ nav .nav li {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  padding-top: 1.5rem;
 }
 
 .category-list button {
@@ -967,5 +970,33 @@ footer .footer-nav ul li + li {
     transform: scaleY(1);
     -webkit-transform: scaleY(1);
   }
+}
+
+.shopping-container {
+  position: absolute;
+  inset: 0 0 0 0;
+  background: white;
+}
+
+.shopping-container .cart {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  background: powderblue;
+  float: right;
+}
+
+.shopping-container .cart .added {
+  border: 1px solid black;
+  text-align: center;
+  position: relative;
+  padding-block: 1rem;
+}
+
+.shopping-container .cart .added .icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(1000%, -40%);
+          transform: translate(1000%, -40%);
 }
 /*# sourceMappingURL=main.css.map */

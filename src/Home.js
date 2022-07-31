@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaRegTimesCircle } from "react-icons/fa";
 import Nav from "./components/Nav";
 
 export default function Home() {
@@ -22,6 +22,20 @@ export default function Home() {
         <Nav />
         <div className="background-filter"></div>
         <h1 style={{ fontFamily: "Shadows Into Light, serif" }}>{page}</h1>
+        <div className="shopping-container">
+          <div className="cart">
+            <div className="added">
+              <h4>ADDED TO BAG</h4>
+              <span className="icon">
+                <FaRegTimesCircle />
+              </span>
+            </div>
+            <div className="shopping-list"></div>
+            <div className="checkout">
+              <button>CHECKOUT</button>
+            </div>
+          </div>
+        </div>
       </header>
       <main>
         {/* <h2 className="featured">Featured Products</h2>
