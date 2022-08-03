@@ -338,6 +338,7 @@ h2.featured {
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[2];
       grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: 100%;
   gap: 1rem;
 }
 
@@ -469,7 +470,7 @@ nav .utilities .shopping-cart span {
   border-radius: 50%;
   background-color: white;
   color: red;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 nav .nav {

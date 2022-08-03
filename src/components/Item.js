@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "./data";
+import { useList, useListUpdate } from "./CartContext";
 
 const Item = () => {
   let { itemId } = useParams();
   const item = products.find((product) => product.id == itemId);
   const [checked, setChecked] = useState("xs");
+
+  const list = useList();
+  console.log(list);
+  const addToCart = useListUpdate();
 
   const handleCheck = (e) => {
     setChecked(() => e.target.value);
@@ -23,6 +28,7 @@ const Item = () => {
       price: item.price,
     };
     console.log(addedItem);
+    addToCart(addedItem);
   };
 
   const {

@@ -9,10 +9,14 @@ import {
 import { Link } from "react-router-dom";
 import Search from "./Search";
 import ShoppingCart from "./ShoppingCart";
+import { useList } from "./CartContext";
 
 const Nav = () => {
   const [show, setShow] = useState(false);
   const [close, setClose] = useState(false);
+
+  const numberOfItems = useList().length;
+  console.log(numberOfItems);
 
   const handleClose = () => {
     if (!close) {
@@ -62,7 +66,7 @@ const Nav = () => {
           </a>
           <a href="#" className="shopping-cart">
             <FaShoppingBag onClick={handleClose} />
-            <span>5</span>
+            <span>{numberOfItems}</span>
           </a>
           <a href="#" className="show-nav" onClick={() => handleToggle()}>
             <FaBars />

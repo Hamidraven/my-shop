@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import Nav from "./components/Nav";
-import Item from "./components/Item";
+
 
 export default function Home() {
   const [page, setPage] = useState("");
@@ -17,7 +17,6 @@ export default function Home() {
     }
   }, [location]);
 
-  const sampleContext = createContext();
 
   const handleAddToCart = () => {
     console.log("tada!");
@@ -31,9 +30,6 @@ export default function Home() {
         <h1 style={{ fontFamily: "Shadows Into Light, serif" }}>{page}</h1>
       </header>
       <main>
-        {/* <h2 className="featured">Featured Products</h2>
-        <Category categoryList={categoryList} filterCategory={filterCategory} />
-        <Products items={items} /> */}
         <Outlet />
       </main>
       <footer>
