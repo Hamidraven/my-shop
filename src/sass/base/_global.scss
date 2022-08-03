@@ -111,18 +111,17 @@ h2.featured {
         margin-bottom: 0.75rem;
         .backdrop-filter {
           position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
+          inset: 0 0 0 0;
           z-index: 2;
           transition: all 0.25s linear;
+          box-shadow: 5px 5px 10px 5px gray;
           cursor: pointer;
           &:hover {
             backdrop-filter: brightness(120%);
           }
           &:active {
             backdrop-filter: brightness(90%);
+            box-shadow: initial;
           }
         }
       }
