@@ -5,6 +5,26 @@ import products from "./data";
 const Item = () => {
   let { itemId } = useParams();
   const item = products.find((product) => product.id == itemId);
+  const [checked, setChecked] = useState("xs");
+
+  const handleCheck = (e) => {
+    setChecked(() => e.target.value);
+    console.log(checked);
+  };
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    const addedItem = {
+      id: item.id,
+      name: item.name,
+      size: checked,
+      color: item.color,
+      image: item.image[0],
+      price: item.price,
+    };
+    console.log(addedItem);
+  };
+
   const {
     name,
     availableSizes,
@@ -43,7 +63,7 @@ const Item = () => {
       </div>
       <div className="shop">
         <ul className="size-list">
-          <form>
+          <form onSubmit={handleAddToCart}>
             {sizeList.map((size) => {
               return (
                 <li key={size.key}>
@@ -53,6 +73,7 @@ const Item = () => {
                     value={size.key}
                     disabled={size.value == 0 && true}
                     onClick={() => setSelected(() => true)}
+                    onChange={handleCheck}
                   />
                   <label
                     htmlFor={size.key}

@@ -1,23 +1,66 @@
 .shopping-container {
   position: absolute;
-  inset: 0 0 0 0;
-  background: white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: all;
+  overflow-y: hidden;
   .cart {
     position: relative;
-    width: 50%;
     height: 100vh;
     background: powderblue;
     float: right;
+    z-index: 5;
+    padding-inline: 0.5rem;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 50%;
+    }
     .added {
-      border: 1px solid black;
+      border-bottom: 1px solid black;
       text-align: center;
       position: relative;
       padding-block: 1rem;
       .icon {
         position: absolute;
-        top: 50%;
-        transform: translate(1000%, -40%)
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
       }
+    }
+    .shopping-list {
+      padding-inline: 0.25rem;
+      height: 20%;
+      display: flex;
+      gap: 0.25rem;
+      .item-image {
+        mix-blend-mode: multiply;
+        width: 40%;
+        img {
+          height: 100%;
+        }
+      }
+      .item-detail {
+        flex: 1;
+        padding: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        input {
+          width: 5ch;
+        }
+      }
+    }
+  }
+  .checkout {
+    display: flex;
+    justify-content: center;
+    padding-block: 0.25rem;
+    button {
+      width: 90%;
+      border-radius: 0;
     }
   }
 }

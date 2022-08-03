@@ -1,14 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { React, useState } from "react";
+import { React } from "react";
 import Home from "./Home";
 import About from "./components/about";
 import Item from "./components/Item";
 import Landing from "./Landing";
 import Products from "./components/Products";
-import products from "./components/data";
 
 export default function App() {
-  const [items, setItems] = useState(products);
   return (
     <Router>
       <Routes>

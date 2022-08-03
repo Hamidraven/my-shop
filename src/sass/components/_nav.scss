@@ -38,7 +38,7 @@ nav {
     gap: 1.5rem;
   }
   .utilities {
-    font-size: 0.75rem;
+    font-size: 1.5rem;
     a + a {
       margin-left: 0.75rem;
     }
@@ -48,6 +48,23 @@ nav {
         &:active .root {
           right: 50%;
         }
+      }
+    }
+    .shopping-cart {
+      position: relative;
+      span {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: -40%;
+        left: 10%;
+        border: 1px solid black;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background-color: white;
+        color: red;
+        font-size: .8rem
       }
     }
   }
@@ -63,7 +80,7 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     padding: 0.5rem;
-    transition: right 0.3s linear;
+    transition: right 0.3s ease-in-out;
     .close {
       position: absolute;
       left: 10px;

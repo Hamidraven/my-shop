@@ -69,7 +69,7 @@ export const Products = () => {
                 </div>
                 <div className="details">
                   <h4>{name}</h4>
-                  <p>${price}.00</p>
+                  <p>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(price)}.00</p>
                 </div>
               </article>
             </Link>
