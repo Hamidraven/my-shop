@@ -30,6 +30,7 @@ const Nav = () => {
 
   window.addEventListener("scroll", navOnScroll);
 
+  //NUMBER OF ITEMS IN SHOPPING CART
   const numberOfItems = useList().length;
 
   //HANDLE SHOPPING CART
@@ -62,7 +63,9 @@ const Nav = () => {
         <ul className={`nav ${show && "slide-nav"}`}>
           <FaRegTimesCircle className="close" onClick={() => handleToggle()} />
           <li>
-            <a href="#">Shop</a>
+            <Link to="/products">
+              <a href="#">Shop</a>
+            </Link>
           </li>
           <li>
             <Link to="/about">About Us</Link>
@@ -82,7 +85,7 @@ const Nav = () => {
           </a>
           <a href="#" className="shopping-cart">
             <FaShoppingBag onClick={handleClose} />
-            <span>{numberOfItems}</span>
+            {numberOfItems ? <span>{numberOfItems}</span> : undefined}
           </a>
           <a href="#" className="show-nav" onClick={() => handleToggle()}>
             <FaBars />

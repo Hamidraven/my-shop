@@ -218,7 +218,7 @@ header {
   background: url(./../image/banner-phone.jpg) no-repeat center;
   background-size: cover;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 header .background-filter {
@@ -272,28 +272,34 @@ h2.featured {
   place-items: center;
 }
 
-.main {
+main {
+  padding-block: 3.5rem;
+  background-color: #efefef;
+  position: relative;
+  z-index: 0;
+}
+
+main .main {
   margin-inline: 1rem;
-  margin-block: 3.5rem;
   font-family: "IM Fell Great Primer", serif;
 }
 
-.main * {
+main .main * {
   margin-inline: auto;
 }
 
-.main img {
+main .main img {
   width: 100%;
 }
 
-.main .start-shopping {
+main .main .start-shopping {
   background: url(./../image/shopping.jpg);
   background-size: cover;
   height: 45vh;
   margin-bottom: 1.5rem;
 }
 
-.main .start-shopping p {
+main .main .start-shopping p {
   height: 100%;
   width: 100%;
   display: -ms-grid;
@@ -305,7 +311,7 @@ h2.featured {
   color: black;
 }
 
-.main .our-story {
+main .main .our-story {
   display: -ms-grid;
   display: grid;
   gap: 2.5rem;
@@ -314,26 +320,26 @@ h2.featured {
 }
 
 @media (min-width: 768px) {
-  .main {
+  main .main {
     margin-inline: 3.5rem;
   }
 }
 
 @media (min-width: 992px) {
-  .main {
+  main .main {
     margin-inline: 6rem;
   }
 }
 
-.main .feautered-products {
+main .main .feautered-products {
   text-align: center;
 }
 
-.main .feautered-products > h4 {
+main .main .feautered-products > h4 {
   margin-block: 2.5rem;
 }
 
-.main .feautered-products .products {
+main .main .feautered-products .products {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[2];
@@ -342,15 +348,15 @@ h2.featured {
   gap: 1rem;
 }
 
-.main .feautered-products .products .image-container {
+main .main .feautered-products .products .image-container {
   position: relative;
   margin-bottom: 0.75rem;
 }
 
-.main .feautered-products .products .image-container .backdrop-filter {
+main .main .feautered-products .products .image-container .backdrop-filter {
   position: absolute;
   inset: 0 0 0 0;
-  z-index: 2;
+  z-index: 1;
   -webkit-transition: all 0.25s linear;
   transition: all 0.25s linear;
   -webkit-box-shadow: 5px 5px 10px 5px gray;
@@ -358,12 +364,12 @@ h2.featured {
   cursor: pointer;
 }
 
-.main .feautered-products .products .image-container .backdrop-filter:hover {
+main .main .feautered-products .products .image-container .backdrop-filter:hover {
   -webkit-backdrop-filter: brightness(120%);
           backdrop-filter: brightness(120%);
 }
 
-.main .feautered-products .products .image-container .backdrop-filter:active {
+main .main .feautered-products .products .image-container .backdrop-filter:active {
   -webkit-backdrop-filter: brightness(90%);
           backdrop-filter: brightness(90%);
   -webkit-box-shadow: initial;
@@ -377,7 +383,7 @@ h2.featured {
 nav {
   position: fixed;
   width: 100%;
-  top: -96px;
+  top: -100px;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   display: -webkit-box;
@@ -393,6 +399,8 @@ nav {
   padding-block: 0.25rem;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
+  z-index: 1;
+  border: 2px dashed #c69b7b;
 }
 
 nav a {
@@ -531,6 +539,8 @@ nav .nav li {
 
 .scroll-nav {
   top: 0 !important;
+  -webkit-box-shadow: 0 3px 5px 0 black;
+          box-shadow: 0 3px 5px 0 black;
 }
 
 @media (min-width: 768px) {
@@ -733,6 +743,7 @@ nav .nav li {
 
 .product .image-container img {
   width: 100%;
+  height: 100%;
 }
 
 .product .image-container .img1 {
@@ -887,8 +898,10 @@ nav .nav li {
 }
 
 footer {
-  border-radius: 15px;
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  background-color: #efefef;
+  position: relative;
+  z-index: 0;
 }
 
 footer form {
@@ -904,6 +917,23 @@ footer form * {
 
 footer form input {
   width: 60%;
+  border: none;
+}
+
+footer form input[type=submit] {
+  background-color: #aaaaaa;
+  -webkit-box-shadow: 2px 2px 3px 1px gray;
+          box-shadow: 2px 2px 3px 1px gray;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+footer form input[type=submit]:active {
+  -webkit-transform: translateX(2px) translateY(2px);
+          transform: translateX(2px) translateY(2px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 footer .social-media {
@@ -957,7 +987,6 @@ footer .footer-nav ul li + li {
   width: 100%;
   height: 80px;
   font-size: 1rem;
-  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

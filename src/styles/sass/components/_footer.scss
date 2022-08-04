@@ -1,6 +1,8 @@
 footer {
-  border-radius: 15px;
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  background-color: #efefef;
+  position: relative;
+  z-index: 0;
   form {
     display: grid;
     gap: 0.25rem;
@@ -10,6 +12,17 @@ footer {
     }
     input {
       width: 60%;
+      border: none;
+      &[type=submit] {
+        background-color: #aaaaaa;
+        box-shadow: 2px 2px 3px 1px gray;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        &:active {
+          transform: translateX(2px) translateY(2px);
+          box-shadow: none;
+        }
+      }
     }
   }
   .social-media {

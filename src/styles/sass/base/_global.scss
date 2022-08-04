@@ -15,7 +15,7 @@ header {
   background: url(./../image/banner-phone.jpg) no-repeat center;
   background-size: cover;
   position: relative;
-  z-index: 0;
+  z-index: 1;
   .background-filter {
     background-position: fixed;
     position: absolute;
@@ -60,69 +60,74 @@ h2.featured {
   place-items: center;
 }
 
-.main {
-  margin-inline: 1rem;
-  margin-block: 3.5rem;
-  * {
-    margin-inline: auto;
-  }
-  img {
-    width: 100%;
-  }
-  .start-shopping {
-    background: url(./../image/shopping.jpg);
-    background-size: cover;
-    height: 45vh;
-    margin-bottom: 1.5rem;
-    p {
-      height: 100%;
+main {
+  padding-block: 3.5rem;
+  background-color: #efefef;
+  position: relative;
+  z-index: 0;
+  .main {
+    margin-inline: 1rem;
+    * {
+      margin-inline: auto;
+    }
+    img {
       width: 100%;
-      display: grid;
-      place-items: center;
-      backdrop-filter: grayscale(60%);
-      font-size: 2rem;
-      color: black;
     }
-  }
-  .our-story {
-    display: grid;
-    gap: 2.5rem;
-    margin-top: 3.5rem;
-    line-height: 2;
-  }
-  @media (min-width: 768px) {
-    margin-inline: 3.5rem;
-  }
-  @media (min-width: 992px) {
-    margin-inline: 6rem;
-  }
-  font-family: "IM Fell Great Primer", serif;
-  .feautered-products {
-    text-align: center;
-    > h4 {
-      margin-block: 2.5rem;
+    .start-shopping {
+      background: url(./../image/shopping.jpg);
+      background-size: cover;
+      height: 45vh;
+      margin-bottom: 1.5rem;
+      p {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        backdrop-filter: grayscale(60%);
+        font-size: 2rem;
+        color: black;
+      }
     }
-    .products {
+    .our-story {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      grid-auto-flow: 100%;
-      gap: 1rem;
-      .image-container {
-        position: relative;
-        margin-bottom: 0.75rem;
-        .backdrop-filter {
-          position: absolute;
-          inset: 0 0 0 0;
-          z-index: 2;
-          transition: all 0.25s linear;
-          box-shadow: 5px 5px 10px 5px gray;
-          cursor: pointer;
-          &:hover {
-            backdrop-filter: brightness(120%);
-          }
-          &:active {
-            backdrop-filter: brightness(90%);
-            box-shadow: initial;
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+      line-height: 2;
+    }
+    @media (min-width: 768px) {
+      margin-inline: 3.5rem;
+    }
+    @media (min-width: 992px) {
+      margin-inline: 6rem;
+    }
+    font-family: "IM Fell Great Primer", serif;
+    .feautered-products {
+      text-align: center;
+      > h4 {
+        margin-block: 2.5rem;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-flow: 100%;
+        gap: 1rem;
+        .image-container {
+          position: relative;
+          margin-bottom: 0.75rem;
+          .backdrop-filter {
+            position: absolute;
+            inset: 0 0 0 0;
+            z-index: 1;
+            transition: all 0.25s linear;
+            box-shadow: 5px 5px 10px 5px gray;
+            cursor: pointer;
+            &:hover {
+              backdrop-filter: brightness(120%);
+            }
+            &:active {
+              backdrop-filter: brightness(90%);
+              box-shadow: initial;
+            }
           }
         }
       }
