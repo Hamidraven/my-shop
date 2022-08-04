@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaSearch,
   FaUserAlt,
@@ -14,10 +14,25 @@ import { useList } from "./CartContext";
 const Nav = () => {
   const [show, setShow] = useState(false);
   const [close, setClose] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [prev, setPrev] = useState(0);
+
+  //**** Hide Header on Scroll Down Show on Scroll Up ****//
+  const navOnScroll = () => {
+    let current = window.pageYOffset;
+    setPrev(() => window.pageYOffset);
+    if (current > prev) {
+      setShowNav(() => false);
+    } else {
+      setShowNav(() => true);
+    }
+  };
+
+  window.addEventListener("scroll", navOnScroll);
 
   const numberOfItems = useList().length;
-  console.log(numberOfItems);
 
+  //HANDLE SHOPPING CART
   const handleClose = () => {
     if (!close) {
       document.body.style.overflow = "hidden";
@@ -27,6 +42,7 @@ const Nav = () => {
     setClose(() => !close);
   };
 
+  //HANDLE NAV
   const handleToggle = () => {
     if (!show) {
       document.body.style.overflow = "hidden";
@@ -37,7 +53,7 @@ const Nav = () => {
   };
 
   return (
-    <nav>
+    <nav className={showNav ? "scroll-nav" : undefined}>
       <Link to="/" className="logo">
         Soseki
       </Link>

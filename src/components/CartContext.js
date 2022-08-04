@@ -27,8 +27,6 @@ export default function CartContext({ children }) {
     setShoppingList(() => [item, ...shoppingList]);
   };
 
-  console.log(shoppingList);
-
   return (
     <ListContext.Provider value={shoppingList}>
       <ListUpdateContext.Provider value={addToCart}>

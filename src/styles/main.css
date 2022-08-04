@@ -375,8 +375,9 @@ h2.featured {
 }
 
 nav {
-  position: relative;
-  top: 0;
+  position: fixed;
+  width: 100%;
+  top: -96px;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   display: -webkit-box;
@@ -390,6 +391,8 @@ nav {
           justify-content: space-between;
   padding-inline: 0.5rem;
   padding-block: 0.25rem;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
 }
 
 nav a {
@@ -524,6 +527,10 @@ nav .nav li {
 
 .slide-nav {
   right: 0 !important;
+}
+
+.scroll-nav {
+  top: 0 !important;
 }
 
 @media (min-width: 768px) {
