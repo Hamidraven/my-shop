@@ -1,12 +1,13 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import Nav from "./components/Nav";
-
+import shopping from "./image/shopping.jpg";
 
 export default function Home() {
   const [page, setPage] = useState("");
   const location = useLocation();
+
   useEffect(() => {
     if (location.pathname.includes("products")) {
       setPage(() => "Products");
@@ -17,17 +18,18 @@ export default function Home() {
     }
   }, [location]);
 
-
-  const handleAddToCart = () => {
-    console.log("tada!");
+  const headerBkg = {
+    backgroundImage: page === "products" ? shopping : undefined,
   };
 
   return (
     <div>
-      <header>
+      <header style={headerBkg}>
         <Nav />
         <div className="background-filter"></div>
-        <h1 style={{ fontFamily: "Shadows Into Light, serif" }}>{page}</h1>
+        <div className="header-message">
+          <h1 style={{ fontFamily: "Shadows Into Light, serif" }}>{page}</h1>
+        </div>
       </header>
       <main>
         <Outlet />

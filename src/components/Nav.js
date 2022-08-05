@@ -7,7 +7,6 @@ import {
   FaRegTimesCircle,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Search from "./Search";
 import ShoppingCart from "./ShoppingCart";
 import { useList } from "./CartContext";
 
@@ -23,7 +22,7 @@ const Nav = () => {
     setPrev(() => window.pageYOffset);
     if (current > prev) {
       setShowNav(() => false);
-    } else {
+    } else if (current < prev || current == 0) {
       setShowNav(() => true);
     }
   };
@@ -34,7 +33,8 @@ const Nav = () => {
   const numberOfItems = useList().length;
 
   //HANDLE SHOPPING CART
-  const handleClose = () => {
+  const handleClose = (e) => {
+    e.preventDefault();
     if (!close) {
       document.body.style.overflow = "hidden";
     } else {
@@ -63,9 +63,7 @@ const Nav = () => {
         <ul className={`nav ${show && "slide-nav"}`}>
           <FaRegTimesCircle className="close" onClick={() => handleToggle()} />
           <li>
-            <Link to="/products">
-              <a href="#">Shop</a>
-            </Link>
+            <Link to="/products">Shop</Link>
           </li>
           <li>
             <Link to="/about">About Us</Link>
@@ -77,12 +75,12 @@ const Nav = () => {
       </div>
       <ul className="utilities">
         <li>
-          <a onClick={() => <Search />}>
+          <a>
             <FaSearch />
           </a>
-          <a href="#">
+          <Link to="/login">
             <FaUserAlt />
-          </a>
+          </Link>
           <a href="#" className="shopping-cart">
             <FaShoppingBag onClick={handleClose} />
             {numberOfItems ? <span>{numberOfItems}</span> : undefined}

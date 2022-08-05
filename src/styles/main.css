@@ -124,89 +124,6 @@ h4 {
   }
 }
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul,
-ol {
-  list-style: none;
-}
-
-/* Remove padding from ul, ol */
-ul,
-ol {
-  padding: 0;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 #root {
   position: relative;
   overflow-x: hidden;
@@ -246,15 +163,22 @@ header picture img {
           filter: sepia(60%);
 }
 
-header h1 {
+header .header-message {
+  z-index: -1;
   position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+header .header-message h1 {
+  position: relative;
   width: 100%;
   top: 45%;
   text-align: center;
   font-size: 5rem;
   z-index: -1;
-  color: black;
-  background: #aaaaaa;
+  color: white;
   -webkit-backdrop-filter: opacity(30%);
           backdrop-filter: opacity(30%);
 }
@@ -695,6 +619,7 @@ nav .nav li {
 .product {
   padding: 0.5rem;
   height: auto;
+  font-family: "IM Fell Great Primer", serif;
 }
 
 @media (min-width: 768px) {
@@ -918,9 +843,10 @@ footer form * {
 footer form input {
   width: 60%;
   border: none;
+  padding-inline: .5rem;
 }
 
-footer form input[type=submit] {
+footer form input[type="submit"] {
   background-color: #aaaaaa;
   -webkit-box-shadow: 2px 2px 3px 1px gray;
           box-shadow: 2px 2px 3px 1px gray;
@@ -929,7 +855,7 @@ footer form input[type=submit] {
   cursor: pointer;
 }
 
-footer form input[type=submit]:active {
+footer form input[type="submit"]:active {
   -webkit-transform: translateX(2px) translateY(2px);
           transform: translateX(2px) translateY(2px);
   -webkit-box-shadow: none;
@@ -1153,5 +1079,124 @@ footer .footer-nav ul li + li {
 .shopping-container .checkout button {
   width: 90%;
   border-radius: 0;
+}
+
+.login, .create-account {
+  border: 1px solid black;
+  margin-inline: 1.75rem;
+  text-align: center;
+  font-family: "IM Fell Great Primer", serif;
+}
+
+.login form, .create-account form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-block: 3.75rem;
+}
+
+.login form span, .create-account form span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  gap: 0.5rem;
+  width: 80%;
+}
+
+.login form input, .login form button, .create-account form input, .create-account form button {
+  width: 80%;
+}
+
+.login form input, .create-account form input {
+  padding: 0.5rem;
+}
+
+.login form button, .create-account form button {
+  padding: 1rem;
+  background: #2C3639;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.login form button:hover, .create-account form button:hover {
+  background: white;
+  color: #2C3639;
+  border: 1px solid #2C3639;
+}
+
+.login .forgot-create, .create-account .forgot-create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.reset-password {
+  border: 1px solid black;
+  margin-inline: 1.75rem;
+  text-align: center;
+}
+
+.reset-password form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-block: 3.75rem;
+}
+
+.reset-password form input, .reset-password form button {
+  width: 80%;
+}
+
+.reset-password form input {
+  padding: 0.5rem;
+}
+
+.reset-password form button {
+  padding: 1rem;
+  background: #2C3639;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.reset-password form button:hover {
+  background: white;
+  color: #2C3639;
+  border: 1px solid #2C3639;
 }
 /*# sourceMappingURL=main.css.map */

@@ -13,7 +13,8 @@ footer {
     input {
       width: 60%;
       border: none;
-      &[type=submit] {
+      padding-inline: .5rem;
+      &[type="submit"] {
         background-color: #aaaaaa;
         box-shadow: 2px 2px 3px 1px gray;
         transition: all 0.2s linear;
