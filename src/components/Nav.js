@@ -20,7 +20,7 @@ const Nav = () => {
   const navOnScroll = () => {
     let current = window.pageYOffset;
     setPrev(() => window.pageYOffset);
-    if (current > prev) {
+    if (current > prev && current > 100) {
       setShowNav(() => false);
     } else if (current < prev || current == 0) {
       setShowNav(() => true);

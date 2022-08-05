@@ -3,28 +3,35 @@ import { Outlet, useLocation } from "react-router-dom";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import Nav from "./components/Nav";
 import shopping from "./image/shopping.jpg";
+import about1 from "./image/about1.jpg";
+import bannerphone from "./image/bannerphone.jpg";
+import banner from "./image/banner.jpg";
 
 export default function Home() {
   const [page, setPage] = useState("");
   const location = useLocation();
+  const [headerImage, setHeaderImage] = useState(about1);
 
   useEffect(() => {
     if (location.pathname.includes("products")) {
       setPage(() => "Products");
+      setHeaderImage(() => shopping);
     } else if (location.pathname.includes("about")) {
       setPage(() => "About");
+      setHeaderImage(() => about1);
     } else {
       setPage(() => "");
+      if (window.innerWidth < 768) {
+        setHeaderImage(() => bannerphone);
+      } else {
+        setHeaderImage(() => banner);
+      }
     }
   }, [location]);
 
-  const headerBkg = {
-    backgroundImage: page === "products" ? shopping : undefined,
-  };
-
   return (
     <div>
-      <header style={headerBkg}>
+      <header style={{ backgroundImage: `url(${headerImage})` }}>
         <Nav />
         <div className="background-filter"></div>
         <div className="header-message">
@@ -43,7 +50,11 @@ export default function Home() {
             htmlFor="email-list"
             placeholder="email address"
           />
-          <input type="submit" value="subscribe" />
+          <input
+            type="submit"
+            value="subscribe"
+            onClick={(e) => e.preventDefault}
+          />
           <p className="copyright">©2022 SOSEKI - All Rights Reserved</p>
         </form>
         <div className="contact-us">

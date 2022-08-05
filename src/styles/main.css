@@ -131,9 +131,10 @@ h4 {
 
 header {
   width: 100vw;
-  height: 100vh;
-  background: url(./../image/banner-phone.jpg) no-repeat center;
+  height: 80vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   z-index: 1;
 }
@@ -150,7 +151,7 @@ header .background-filter {
 
 @media (min-width: 769px) {
   header {
-    background: url(./../image/banner.jpg) no-repeat center fixed;
+    background-attachment: fixed;
     background-size: cover;
   }
 }
@@ -840,6 +841,11 @@ footer form * {
   display: block;
 }
 
+footer form label {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5rem;
+}
+
 footer form input {
   width: 60%;
   border: none;
@@ -888,6 +894,7 @@ footer .social-media a * {
 
 footer .footer-nav {
   padding: 0.5rem;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 footer .footer-nav ul {
@@ -1081,14 +1088,16 @@ footer .footer-nav ul li + li {
   border-radius: 0;
 }
 
-.login, .create-account {
+.login,
+.create-account {
   border: 1px solid black;
   margin-inline: 1.75rem;
   text-align: center;
   font-family: "IM Fell Great Primer", serif;
 }
 
-.login form, .create-account form {
+.login form,
+.create-account form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1106,7 +1115,8 @@ footer .footer-nav ul li + li {
   margin-block: 3.75rem;
 }
 
-.login form span, .create-account form span {
+.login form span,
+.create-account form span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1117,17 +1127,22 @@ footer .footer-nav ul li + li {
   width: 80%;
 }
 
-.login form input, .login form button, .create-account form input, .create-account form button {
+.login form input,
+.login form button,
+.create-account form input,
+.create-account form button {
   width: 80%;
 }
 
-.login form input, .create-account form input {
+.login form input,
+.create-account form input {
   padding: 0.5rem;
 }
 
-.login form button, .create-account form button {
+.login form button,
+.create-account form button {
   padding: 1rem;
-  background: #2C3639;
+  background: #2c3639;
   border: 1px solid white;
   color: white;
   cursor: pointer;
@@ -1135,13 +1150,15 @@ footer .footer-nav ul li + li {
   transition: all 0.2s linear;
 }
 
-.login form button:hover, .create-account form button:hover {
+.login form button:hover,
+.create-account form button:hover {
   background: white;
-  color: #2C3639;
-  border: 1px solid #2C3639;
+  color: #2c3639;
+  border: 1px solid #2c3639;
 }
 
-.login .forgot-create, .create-account .forgot-create {
+.login .forgot-create,
+.create-account .forgot-create {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1176,7 +1193,8 @@ footer .footer-nav ul li + li {
   margin-block: 3.75rem;
 }
 
-.reset-password form input, .reset-password form button {
+.reset-password form input,
+.reset-password form button {
   width: 80%;
 }
 
@@ -1186,7 +1204,7 @@ footer .footer-nav ul li + li {
 
 .reset-password form button {
   padding: 1rem;
-  background: #2C3639;
+  background: #2c3639;
   border: 1px solid white;
   color: white;
   cursor: pointer;
@@ -1196,7 +1214,7 @@ footer .footer-nav ul li + li {
 
 .reset-password form button:hover {
   background: white;
-  color: #2C3639;
-  border: 1px solid #2C3639;
+  color: #2c3639;
+  border: 1px solid #2c3639;
 }
 /*# sourceMappingURL=main.css.map */

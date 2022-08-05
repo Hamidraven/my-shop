@@ -11,9 +11,10 @@
 
 header {
   width: 100vw;
-  height: 100vh;
-  background: url(./../image/banner-phone.jpg) no-repeat center;
+  height: 80vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   z-index: 1;
   .background-filter {
@@ -25,7 +26,7 @@ header {
     z-index: -2;
   }
   @media (min-width: 769px) {
-    background: url(./../image/banner.jpg) no-repeat center fixed;
+    background-attachment: fixed;
     background-size: cover;
   }
   picture {

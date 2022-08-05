@@ -10,6 +10,10 @@ footer {
     * {
       display: block;
     }
+    label {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 1.5rem;
+    }
     input {
       width: 60%;
       border: none;
@@ -44,6 +48,7 @@ footer {
   }
   .footer-nav {
     padding: 0.5rem;
+    font-family: 'Shadows Into Light', cursive;
     ul {
       display: flex;
       justify-content: center;
