@@ -8,7 +8,6 @@ const Item = () => {
   const item = products.find((product) => product.id == itemId);
   const [checked, setChecked] = useState("xs");
 
-
   const addToCart = useListUpdate();
 
   const handleCheck = (e) => {
@@ -52,9 +51,15 @@ const Item = () => {
   return (
     <div className="product">
       <div className="image-container">
-        <img src={image[0]} alt={name} className="img1" />
-        <img src={image[1]} alt={name} className="img2" />
-        {image[2] && <img src={image[2]} alt={name} className="img3" />}
+        <div className="img1">
+          <img src={image[0]} alt={name} />
+        </div>
+        <div className="img2">
+          <img src={image[1]} alt={name} />
+        </div>
+        <div className="img3">
+          {image[2] && <img src={image[2]} alt={name} />}
+        </div>
       </div>
       <div className="details">
         <h5>{name}</h5>
