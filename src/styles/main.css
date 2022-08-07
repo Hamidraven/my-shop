@@ -522,8 +522,8 @@ nav .nav li {
   margin-inline: 1.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-column-gap: 1.5rem;
