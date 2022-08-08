@@ -1,0 +1,20 @@
+.about {
+  font-family: "IM Fell Great Primer", serif;
+  line-height: 2;
+  text-align: center;
+  h2,
+  h4 {
+    color: #a27b5c;
+  }
+  p {
+    color: #87805e;
+  }
+  h2 {
+    text-align: left;
+  }
+  address {
+    margin-block: 3rem;
+    display: grid;
+    gap: 1rem;
+  }
+}

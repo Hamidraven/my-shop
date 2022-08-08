@@ -170,6 +170,7 @@ header .header-message {
   top: 40%;
   width: 100%;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header .header-message h1 {
@@ -814,7 +815,7 @@ nav .nav li {
     left: -0.6rem;
     top: -0.5rem;
     z-index: -1;
-    background-color: #f7567c;
+    background-color: #A27B5C;
     border-radius: 3px;
     -webkit-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
@@ -1008,17 +1009,18 @@ footer .footer-nav ul li + li {
   left: 0;
   z-index: 2;
   pointer-events: all;
-  overflow-y: hidden;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .shopping-container .cart {
   position: relative;
   height: 100vh;
-  background: powderblue;
+  background: #2C3639;
   float: right;
   z-index: 5;
   padding-inline: 0.5rem;
   width: 100%;
+  overflow: auto;
 }
 
 @media (min-width: 768px) {
@@ -1042,12 +1044,16 @@ footer .footer-nav ul li + li {
 }
 
 .shopping-container .cart .shopping-list {
+  position: relative;
+  color: #DCD7C9;
+  z-index: 6;
   padding-inline: 0.25rem;
-  height: 20%;
+  height: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 0.25rem;
+  margin-block: 0.5rem;
 }
 
 .shopping-container .cart .shopping-list .item-image {
@@ -1092,6 +1098,13 @@ footer .footer-nav ul li + li {
 .shopping-container .checkout button {
   width: 90%;
   border-radius: 0;
+}
+
+.underline {
+  width: 85%;
+  height: 2px;
+  background: black;
+  margin: 1rem auto;
 }
 
 .login,
@@ -1222,5 +1235,31 @@ footer .footer-nav ul li + li {
   background: white;
   color: #2c3639;
   border: 1px solid #2c3639;
+}
+
+.about {
+  font-family: "IM Fell Great Primer", serif;
+  line-height: 2;
+  text-align: center;
+}
+
+.about h2,
+.about h4 {
+  color: #a27b5c;
+}
+
+.about p {
+  color: #87805e;
+}
+
+.about h2 {
+  text-align: left;
+}
+
+.about address {
+  margin-block: 3rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

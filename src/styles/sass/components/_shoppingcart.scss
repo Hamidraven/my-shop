@@ -6,15 +6,16 @@
   left: 0;
   z-index: 2;
   pointer-events: all;
-  overflow-y: hidden;
+  background: rgba(black, 0.5);
   .cart {
     position: relative;
     height: 100vh;
-    background: powderblue;
+    background: #2C3639;
     float: right;
     z-index: 5;
     padding-inline: 0.5rem;
     width: 100%;
+    overflow: auto;
     @media (min-width: 768px) {
       width: 50%;
     }
@@ -31,10 +32,14 @@
       }
     }
     .shopping-list {
+      position: relative;
+      color: #DCD7C9;
+      z-index: 6;
       padding-inline: 0.25rem;
-      height: 20%;
+      height: 10rem;
       display: flex;
       gap: 0.25rem;
+      margin-block: 0.5rem;
       .item-image {
         mix-blend-mode: multiply;
         width: 40%;
@@ -63,4 +68,10 @@
       border-radius: 0;
     }
   }
+}
+.underline {
+  width: 85%;
+  height: 2px;
+  background: black;
+  margin: 1rem auto;
 }
