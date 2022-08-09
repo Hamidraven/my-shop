@@ -44,7 +44,8 @@ const Nav = () => {
   };
 
   //HANDLE NAV
-  const handleToggle = () => {
+  const handleToggle = (e) => {
+    e.preventDefault();
     if (!show) {
       document.body.style.overflow = "hidden";
     } else {
@@ -61,7 +62,7 @@ const Nav = () => {
       {close && <ShoppingCart handleClose={handleClose} />}
       <div className="nav-wrapper">
         <ul className={`nav ${show && "slide-nav"}`}>
-          <FaRegTimesCircle className="close" onClick={() => handleToggle()} />
+          <FaRegTimesCircle className="close" onClick={handleToggle} />
           <li>
             <Link to="/products">Shop</Link>
           </li>
@@ -85,7 +86,7 @@ const Nav = () => {
             <FaShoppingBag onClick={handleClose} />
             {numberOfItems ? <span>{numberOfItems}</span> : undefined}
           </a>
-          <a href="#" className="show-nav" onClick={() => handleToggle()}>
+          <a href="#" className="show-nav" onClick={handleToggle}>
             <FaBars />
           </a>
         </li>
