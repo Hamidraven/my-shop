@@ -28,14 +28,13 @@ export default function CartContext({ children }) {
 
   const addToCart = (item) => {
     // item.qty = quantity;
-    shoppingList.forEach((product) => {
-      if (product.size == item.size && product.id == item.id) {
-        let index = shoppingList.findIndex((e) => e.id == product.id);
-        shoppingList[index].qty += 1;
-        setShoppingList(() => shoppingList);
-        return;
-      }
-    });
+    let index = shoppingList.findIndex((e) => e.id == item.id && e.size == item.size);
+    if (index > -1) {
+      shoppingList[index].qty += 1;
+      setShoppingList(() => shoppingList);
+    } else {
+      setShoppingList(() => [item, ...shoppingList]);
+    }
   };
 
   return (
