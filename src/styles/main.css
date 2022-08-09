@@ -129,6 +129,11 @@ h4 {
   overflow-x: hidden;
 }
 
+body, html {
+  background-color: #efefef;
+  position: relative;
+}
+
 header {
   width: 100vw;
   height: 80vh;
@@ -200,13 +205,13 @@ h2.featured {
 
 main {
   padding-block: 3.5rem;
-  background-color: #efefef;
   position: relative;
   z-index: 0;
 }
 
 main .main {
   margin-inline: 1rem;
+  font-size: 1.2rem;
   font-family: "IM Fell Great Primer", serif;
 }
 
