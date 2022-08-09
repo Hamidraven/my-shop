@@ -416,7 +416,7 @@ nav .nav {
   height: 100vh;
   background: powderblue;
   top: -1rem;
-  right: -50%;
+  right: -51%;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1014,8 +1014,8 @@ footer .footer-nav ul li + li {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -2px;
   z-index: 2;
   pointer-events: all;
   background: rgba(0, 0, 0, 0.5);
