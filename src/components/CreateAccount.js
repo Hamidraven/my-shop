@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function CreateAccount() {
   return (
-    <div className="create-account">
+    <motion.div
+      className="create-account"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h3>Login</h3>
       <form>
         <span className="name">
@@ -22,6 +28,6 @@ export default function CreateAccount() {
           Return to login
         </Link>
       </span>
-    </div>
+    </motion.div>
   );
 }

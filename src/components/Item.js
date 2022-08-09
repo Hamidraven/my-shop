@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import products from "./data";
-import { useListUpdate } from "./CartContext";
+import { useListUpdate, useList } from "./CartContext";
 
 const Item = () => {
   let { itemId } = useParams();
@@ -9,10 +9,10 @@ const Item = () => {
   const [checked, setChecked] = useState("xs");
 
   const addToCart = useListUpdate();
+  let shoppingList = useList();
 
   const handleCheck = (e) => {
     setChecked(() => e.target.value);
-    console.log(checked);
   };
 
   const handleAddToCart = (e) => {
@@ -21,11 +21,15 @@ const Item = () => {
       id: item.id,
       name: item.name,
       size: checked,
-      color: item.color,
       image: item.image[0],
       price: item.price,
+      qty: 1,
     };
-    console.log(addedItem);
+    shoppingList.forEach((item) => {
+      if (item.id == addedItem.id && item.size == addedItem.size) {
+        console.log(item);
+      }
+    });
     addToCart(addedItem);
   };
 

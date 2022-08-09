@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import about from "./image/about.jpg";
 import about1 from "./image/about1.jpg";
 import { Link } from "react-router-dom";
 import products from "./components/data";
+import { motion } from "framer-motion";
 
 export default function Landing() {
   const shuffled = products.sort(() => 0.5 - Math.random());
   let selected = shuffled.slice(0, 4);
 
   return (
-    <div className="main">
+    <motion.div
+      className="main"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Link to="/products" style={{ textDecoration: "none" }}>
         <div className="start-shopping">
           <p>start shopping</p>
@@ -65,6 +71,6 @@ export default function Landing() {
           range of body types.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }

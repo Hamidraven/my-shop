@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Category from "./Category";
 import products from "./data";
 import Loading from "./Loading";
+import { motion } from "framer-motion";
 
 export const Products = () => {
   const [items, setItems] = useState(products);
@@ -51,7 +52,12 @@ export const Products = () => {
   };
 
   return (
-    <div className="shop">
+    <motion.div
+      className="shop"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Category categoryList={categoryList} filterCategory={filterCategory} />
       <div className="products-list">
         {items.map((item) => {
@@ -69,7 +75,14 @@ export const Products = () => {
                 </div>
                 <div className="details">
                   <h4>{name}</h4>
-                  <p>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(price)}.00</p>
+                  <p>
+                    {new Intl.NumberFormat("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                      currencyDisplay: "narrowSymbol",
+                    }).format(price)}
+                    .00
+                  </p>
                 </div>
               </article>
             </Link>
@@ -83,7 +96,7 @@ export const Products = () => {
           <Loading />
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

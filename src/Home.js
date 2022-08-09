@@ -6,6 +6,7 @@ import shopping from "./image/shopping.jpg";
 import about1 from "./image/about1.jpg";
 import bannerphone from "./image/bannerphone.jpg";
 import banner from "./image/banner.jpg";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [page, setPage] = useState("");

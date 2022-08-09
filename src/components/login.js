@@ -1,10 +1,16 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Login = () => {
   return (
-    <div className="login">
+    <motion.div
+      className="login"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h3>Login</h3>
       <form>
         <input type="text" placeholder="Email" />
@@ -31,7 +37,7 @@ const Login = () => {
           </Link>
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

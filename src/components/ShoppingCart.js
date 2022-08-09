@@ -18,17 +18,22 @@ export default function ShoppingCart({ handleClose }) {
           return (
             <div className="shopping-list" key={item.id}>
               <div className="item-image">
-                <img src={item.image} alt="" />
+                <img
+                  src={item.image}
+                  alt=""
+                  onClick={() => console.log(shoppingList)}
+                />
               </div>
               <div className="item-detail">
                 <p className="item-name">{item.name}</p>
-                <p className="size">{item.size}</p>
-                <p className="price">{item.price}</p>
-                <input type="number" />
+                <p className="size">{item.size.toUpperCase()}</p>
+                <p className="price">${item.price}</p>
+                <input type="number" value={item.qty} />
               </div>
             </div>
           );
         })}
+        <div className="underline"></div>
         {/* <div className="shopping-list">
             <div className="item-image">
               <img

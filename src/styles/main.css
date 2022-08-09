@@ -576,6 +576,15 @@ nav .nav li {
   text-align: center;
 }
 
+.button-load {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .category-list {
   display: -ms-grid;
   display: grid;
