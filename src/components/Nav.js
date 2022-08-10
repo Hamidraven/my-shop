@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   FaSearch,
   FaUserAlt,
@@ -30,7 +30,7 @@ const Nav = () => {
   window.addEventListener("scroll", navOnScroll);
 
   //NUMBER OF ITEMS IN SHOPPING CART
-  const numberOfItems = useList().length;
+  const numberOfItems = useList();
 
   //HANDLE SHOPPING CART
   const handleClose = (e) => {
@@ -84,7 +84,7 @@ const Nav = () => {
           </Link>
           <a href="#" className="shopping-cart">
             <FaShoppingBag onClick={handleClose} />
-            {numberOfItems ? <span>{numberOfItems}</span> : undefined}
+            {numberOfItems ? <span>{numberOfItems.length}</span> : undefined}
           </a>
           <a href="#" className="show-nav" onClick={handleToggle}>
             <FaBars />
