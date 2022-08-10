@@ -538,6 +538,13 @@ nav .nav li {
   font-family: "IM Fell Great Primer", serif;
 }
 
+@media (max-width: 551px) {
+  .shop .products-list {
+    -ms-grid-columns: (minmax(10.5rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+  }
+}
+
 .shop .products-list article {
   display: -ms-grid;
   display: grid;
