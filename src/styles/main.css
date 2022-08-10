@@ -1096,7 +1096,9 @@ footer .footer-nav ul li + li {
 }
 
 .shopping-container .cart .shopping-list .item-detail input {
-  width: 5ch;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .shopping-container .checkout {
