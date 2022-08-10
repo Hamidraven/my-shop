@@ -31,7 +31,7 @@ export const Products = () => {
     console.log(newCategory);
   };
 
-  //load more items on click
+  //load more items on click 
   useEffect(() => {
     if (filter.length === 0) {
       // IF FILTER IS "ALL PRODUCTS"
@@ -50,6 +50,8 @@ export const Products = () => {
       setNumberOfItems((e) => e + 4);
     }, 2000);
   };
+  console.log('items:' + items.length)
+  console.log('products:' + products.length)
 
   return (
     <motion.div

@@ -6,7 +6,7 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 export default function App() {
   return (
     <CartContext>
-      <Router>
+      <Router basename=" https://parsa-parishan.github.io/My-shop/">
         <AnimatedRoutes />
       </Router>
     </CartContext>
