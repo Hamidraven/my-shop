@@ -54,7 +54,8 @@
         flex-direction: column;
         justify-content: space-around;
         input {
-          width: 5ch;
+          width: fit-content;
+          
         }
       }
     }
