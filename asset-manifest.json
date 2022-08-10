@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/My-shop/static/css/main.39a89a9f.css",
+    "main.js": "/My-shop/static/js/main.0e0cef62.js",
+    "static/media/about.jpg": "/My-shop/static/media/about.633d97aae30d4f00603e.jpg",
+    "static/media/about1.jpg": "/My-shop/static/media/about1.ac263acb79452c55b589.jpg",
+    "static/media/bannerphone.jpg": "/My-shop/static/media/bannerphone.d14d3d2c09031c1085d6.jpg",
+    "static/media/banner.jpg": "/My-shop/static/media/banner.16622d404236e104f923.jpg",
+    "static/media/shopping.jpg": "/My-shop/static/media/shopping.3b9b536038500d14a4f4.jpg",
+    "index.html": "/My-shop/index.html",
+    "main.39a89a9f.css.map": "/My-shop/static/css/main.39a89a9f.css.map",
+    "main.0e0cef62.js.map": "/My-shop/static/js/main.0e0cef62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39a89a9f.css",
+    "static/js/main.0e0cef62.js"
+  ]
+}
