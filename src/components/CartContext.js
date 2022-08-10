@@ -1,7 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 
 const ListContext = React.createContext();
 const ListUpdateContext = React.createContext();
+const RemoveContext = React.createContext();
 
 export function useList() {
   return useContext(ListContext);
@@ -9,6 +10,10 @@ export function useList() {
 
 export function useListUpdate() {
   return useContext(ListUpdateContext);
+}
+
+export function useRemove() {
+  return useContext(RemoveContext);
 }
 
 export default function CartContext({ children }) {
@@ -28,7 +33,9 @@ export default function CartContext({ children }) {
 
   const addToCart = (item) => {
     // item.qty = quantity;
-    let index = shoppingList.findIndex((e) => e.id == item.id && e.size == item.size);
+    let index = shoppingList.findIndex(
+      (e) => e.id == item.id && e.size == item.size
+    );
     if (index > -1) {
       shoppingList[index].qty += 1;
       setShoppingList(() => shoppingList);
@@ -37,10 +44,22 @@ export default function CartContext({ children }) {
     }
   };
 
+  const removeItem = (item) => {
+    setShoppingList((shoppingList) => {
+      shoppingList.filter(
+        (product) => product.id != item.id && product.size != item.size
+      );
+    });
+  };
+
+  console.log(shoppingList);
+
   return (
     <ListContext.Provider value={shoppingList}>
       <ListUpdateContext.Provider value={addToCart}>
-        {children}
+        <RemoveContext.Provider value={removeItem}>
+          {children}
+        </RemoveContext.Provider>
       </ListUpdateContext.Provider>
     </ListContext.Provider>
   );
