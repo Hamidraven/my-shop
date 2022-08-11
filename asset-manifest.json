@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/My-shop/static/css/main.39a89a9f.css",
-    "main.js": "/My-shop/static/js/main.5dbc0ea5.js",
-    "static/media/about.jpg": "/My-shop/static/media/about.633d97aae30d4f00603e.jpg",
-    "static/media/about1.jpg": "/My-shop/static/media/about1.ac263acb79452c55b589.jpg",
-    "static/media/bannerphone.jpg": "/My-shop/static/media/bannerphone.d14d3d2c09031c1085d6.jpg",
-    "static/media/banner.jpg": "/My-shop/static/media/banner.16622d404236e104f923.jpg",
-    "static/media/shopping.jpg": "/My-shop/static/media/shopping.3b9b536038500d14a4f4.jpg",
-    "index.html": "/My-shop/index.html",
-    "main.39a89a9f.css.map": "/My-shop/static/css/main.39a89a9f.css.map",
-    "main.5dbc0ea5.js.map": "/My-shop/static/js/main.5dbc0ea5.js.map"
+    "main.css": "/my-shop/static/css/main.bd63895d.css",
+    "main.js": "/my-shop/static/js/main.41366bab.js",
+    "static/media/about.jpg": "/my-shop/static/media/about.633d97aae30d4f00603e.jpg",
+    "static/media/about1.jpg": "/my-shop/static/media/about1.ac263acb79452c55b589.jpg",
+    "static/media/bannerphone.jpg": "/my-shop/static/media/bannerphone.d14d3d2c09031c1085d6.jpg",
+    "static/media/banner.jpg": "/my-shop/static/media/banner.16622d404236e104f923.jpg",
+    "static/media/shopping.jpg": "/my-shop/static/media/shopping.3b9b536038500d14a4f4.jpg",
+    "index.html": "/my-shop/index.html",
+    "main.bd63895d.css.map": "/my-shop/static/css/main.bd63895d.css.map",
+    "main.41366bab.js.map": "/my-shop/static/js/main.41366bab.js.map"
   },
   "entrypoints": [
-    "static/css/main.39a89a9f.css",
-    "static/js/main.5dbc0ea5.js"
+    "static/css/main.bd63895d.css",
+    "static/js/main.41366bab.js"
   ]
 }
