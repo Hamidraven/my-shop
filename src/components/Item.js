@@ -25,11 +25,6 @@ const Item = () => {
       price: item.price,
       qty: 1,
     };
-    shoppingList.forEach((item) => {
-      if (item.id == addedItem.id && item.size == addedItem.size) {
-        console.log(item);
-      }
-    });
     addToCart(addedItem);
   };
 

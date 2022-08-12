@@ -19,21 +19,11 @@ export function useRemove() {
 export default function CartContext({ children }) {
   // const [quantity, setQuantity] = useState(1);
 
-  const sample = {
-    id: 0,
-    name: "BCC Hell-Fire Club",
-    size: "Xsmall",
-    image:
-      "https://cdn.shopify.com/s/files/1/0660/0091/products/HELLFIRECLUB_MOCK.png?v=1657562857",
-    price: "28,99",
-    qty: 1,
-  };
-
-  const [shoppingList, setShoppingList] = useState([sample]);
+  const [shoppingList, setShoppingList] = useState([]);
 
   const addToCart = (item) => {
     // item.qty = quantity;
-    let index = shoppingList.findIndex(
+    let index = shoppingList?.findIndex(
       (e) => e.id == item.id && e.size == item.size
     );
     if (index > -1) {
@@ -46,9 +36,7 @@ export default function CartContext({ children }) {
 
   const removeItem = (item) => {
     setShoppingList((shoppingList) => {
-      shoppingList.filter(
-        (product) => product.id != item.id && product.size != item.size
-      );
+      return shoppingList.filter((product) => product != item);
     });
   };
 

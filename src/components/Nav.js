@@ -84,7 +84,9 @@ const Nav = () => {
           </Link>
           <a href="#" className="shopping-cart">
             <FaShoppingBag onClick={handleClose} />
-            {numberOfItems ? <span>{numberOfItems.length}</span> : undefined}
+            {numberOfItems.length > 0 ? (
+              <span>{numberOfItems.length}</span>
+            ) : undefined}
           </a>
           <a href="#" className="show-nav" onClick={handleToggle}>
             <FaBars />

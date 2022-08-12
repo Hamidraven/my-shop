@@ -33,12 +33,16 @@ export default function ShoppingCart({ handleClose }) {
                 <p className="size">{item.size.toUpperCase()}</p>
                 <p className="price">${item.price}</p>
                 <span type="number">{item.qty}</span>
-                <input type="button" value="remove" onClick={removeItem} />
+                <input
+                  type="button"
+                  value="remove"
+                  onClick={() => removeItem(item)}
+                />
               </div>
             </div>
           );
         })}
-        {!shoppingList && (
+        {shoppingList.length == 0 && (
           <div style={{ textAlign: "center", marginTop: "20px" }}>
             Your cart is currently empty.
           </div>
