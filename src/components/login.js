@@ -22,7 +22,7 @@ const Login = () => {
       <div className="forgot-create">
         <span>
           <Link
-            to="/reset-password"
+            to="reset-password"
             style={{ textDecoration: "underline", color: "black" }}
           >
             Forgot Password?
@@ -30,7 +30,7 @@ const Login = () => {
         </span>
         <span>
           <Link
-            to="/create-account"
+            to="create-account"
             style={{ textDecoration: "underline", color: "black" }}
           >
             Create account

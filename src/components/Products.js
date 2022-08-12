@@ -63,7 +63,7 @@ export const Products = () => {
           const { id, name, price, image } = item;
           return (
             <Link
-              to={`/products/${id}`}
+              to={`products/${id}`}
               key={id}
               style={{ color: "black", textDecoration: "none" }}
             >

@@ -16,14 +16,14 @@ export default function AnimatedRoutes() {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />}>
+        <Route path="/my-shop" element={<Home />}>
           <Route index element={<Landing />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:itemId" element={<Item />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
-          <Route path="create-account" element={<CreateAccount />} />
-          <Route path="reset-password" element={<ResetPassword />} />
+          <Route path="login/create-account" element={<CreateAccount />} />
+          <Route path="login/reset-password" element={<ResetPassword />} />
         </Route>
       </Routes>
     </AnimatePresence>

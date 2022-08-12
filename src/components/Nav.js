@@ -56,7 +56,7 @@ const Nav = () => {
 
   return (
     <nav className={showNav ? "scroll-nav" : undefined}>
-      <Link to="/" className="logo">
+      <Link to="/my-shop" className="logo">
         Soseki
       </Link>
       {close && <ShoppingCart handleClose={handleClose} />}
@@ -64,10 +64,10 @@ const Nav = () => {
         <ul className={`nav ${show && "slide-nav"}`}>
           <FaRegTimesCircle className="close" onClick={handleToggle} />
           <li>
-            <Link to="/products">Shop</Link>
+            <Link to="products">Shop</Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="about">About Us</Link>
           </li>
           <li>
             <a href="#">Contact Us</a>
@@ -79,7 +79,7 @@ const Nav = () => {
           <a>
             <FaSearch />
           </a>
-          <Link to="/login">
+          <Link to="login">
             <FaUserAlt />
           </Link>
           <a href="#" className="shopping-cart">

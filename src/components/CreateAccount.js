@@ -10,7 +10,7 @@ export default function CreateAccount() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h3>Login</h3>
+      <h3>Create Account</h3>
       <form>
         <span className="name">
           <input type="text" placeholder="First Name" />
@@ -22,7 +22,7 @@ export default function CreateAccount() {
       </form>
       <span>
         <Link
-          to="/login"
+          to="/my-shop/login"
           style={{ textDecoration: "underline", color: "black" }}
         >
           Return to login

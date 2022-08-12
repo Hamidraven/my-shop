@@ -16,7 +16,7 @@ export default function Landing() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Link to="/products" style={{ textDecoration: "none" }}>
+      <Link to="products" style={{ textDecoration: "none" }}>
         <div className="start-shopping">
           <p>start shopping</p>
         </div>
@@ -28,7 +28,7 @@ export default function Landing() {
             const { id, name, price, image } = item;
             return (
               <Link
-                to={`/products/${id}`}
+                to={`products/${id}`}
                 key={id}
                 style={{ color: "black", textDecoration: "none" }}
               >

@@ -19,7 +19,7 @@ export default function ResetPassword() {
       <div className="log-back">
         <span>
           <Link
-            to="/login"
+            to="/my-shop/login"
             style={{
               textDecoration: "underline",
               color: "black",
