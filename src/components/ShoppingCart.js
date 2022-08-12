@@ -25,7 +25,6 @@ export default function ShoppingCart({ handleClose }) {
                 <img
                   src={item.image}
                   alt=""
-                  onClick={() => console.log(shoppingList)}
                 />
               </div>
               <div className="item-detail">

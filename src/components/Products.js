@@ -28,7 +28,6 @@ export const Products = () => {
     const newCategory = products.filter((item) => item.category === category);
     setItems(() => newCategory.slice(0, numberOfItems));
     setFilter(() => newCategory);
-    console.log(newCategory);
   };
 
   //load more items on click 
@@ -50,8 +49,6 @@ export const Products = () => {
       setNumberOfItems((e) => e + 4);
     }, 2000);
   };
-  console.log('items:' + items.length)
-  console.log('products:' + products.length)
 
   return (
     <motion.div
