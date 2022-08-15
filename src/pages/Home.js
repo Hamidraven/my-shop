@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
-import Nav from "./components/Nav";
-import shopping from "./image/shopping.jpg";
-import about1 from "./image/about1.jpg";
-import bannerphone from "./image/bannerphone.jpg";
-import banner from "./image/banner.jpg";
+import Nav from "../components/Nav";
+import shopping from "../image/shopping.jpg";
+import about1 from "../image/about1.jpg";
+import bannerphone from "../image/bannerphone.jpg";
+import banner from "../image/banner.jpg";
 import { motion } from "framer-motion";
 
 export default function Home() {

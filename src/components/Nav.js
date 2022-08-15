@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ShoppingCart from "./ShoppingCart";
-import { useList } from "./CartContext";
+import { useList } from "../contexts/CartContext";
 
 const Nav = () => {
   const [show, setShow] = useState(false);

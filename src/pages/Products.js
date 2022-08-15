@@ -1,8 +1,8 @@
 import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Category from "./Category";
-import products from "./data";
-import Loading from "./Loading";
+import Category from "../components/Category";
+import products from "../components/data";
+import Loading from "../components/Loading";
 import { motion } from "framer-motion";
 
 export const Products = () => {

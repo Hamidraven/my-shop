@@ -1,8 +1,8 @@
 import React from "react";
-import about from "./image/about.jpg";
-import about1 from "./image/about1.jpg";
+import about from "../image/about.jpg";
+import about1 from "../image/about1.jpg";
 import { Link } from "react-router-dom";
-import products from "./components/data";
+import products from "../components/data";
 import { motion } from "framer-motion";
 
 export default function Landing() {

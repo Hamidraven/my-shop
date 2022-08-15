@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import products from "./data";
-import { useListUpdate, useList } from "./CartContext";
+import products from "../components/data";
+import { useListUpdate, useList } from "../contexts/CartContext";
 
 const Item = () => {
   let { itemId } = useParams();

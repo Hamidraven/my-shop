@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Home from "../Home";
-import About from "./about";
-import Item from "./Item";
-import Landing from "../Landing";
-import Products from "./Products";
-import Login from "./Login";
-import CreateAccount from "./CreateAccount";
-import ResetPassword from "./ResetPassword";
+import Home from "../pages/Home";
+import About from "../pages/about";
+import Item from "../pages/Item";
+import Landing from "../pages/Landing";
+import Products from "../pages/Products";
+import Login from "../pages/Login";
+import CreateAccount from "../pages/CreateAccount";
+import ResetPassword from "../pages/ResetPassword";
 import { AnimatePresence } from "framer-motion";
 
 export default function AnimatedRoutes() {

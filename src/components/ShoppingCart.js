@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegTimesCircle } from "react-icons/fa";
-import { useList, useRemove } from "./CartContext";
+import { useRemove, useList } from "../contexts/CartContext";
 
 export default function ShoppingCart({ handleClose }) {
   let shoppingList = useList();
@@ -22,10 +22,7 @@ export default function ShoppingCart({ handleClose }) {
               key={item.id + item.name + item.size}
             >
               <div className="item-image">
-                <img
-                  src={item.image}
-                  alt=""
-                />
+                <img src={item.image} alt="" />
               </div>
               <div className="item-detail">
                 <p className="item-name">{item.name}</p>
