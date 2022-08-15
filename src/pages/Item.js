@@ -11,10 +11,12 @@ const Item = () => {
   const addToCart = useListUpdate();
   let shoppingList = useList();
 
+  //SHOW IF AN OPTION IN SELECTED
   const handleCheck = (e) => {
     setChecked(() => e.target.value);
   };
 
+  //ADD NEW ITEM TO SHOPPING CART
   const handleAddToCart = (e) => {
     e.preventDefault();
     const addedItem = {

@@ -56,6 +56,7 @@ const Nav = () => {
     }
   };
 
+  //SET BODY OVERFLOW PROPERTY TO AUTO WHEN PAGE CHANGES
   useEffect(() => {
     document.body.style.overflow = "auto";
   }, []);

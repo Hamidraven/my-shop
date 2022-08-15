@@ -13,6 +13,7 @@ export default function Home() {
   const location = useLocation();
   const [headerImage, setHeaderImage] = useState(about1);
 
+  //CHANGE HEADER BACKGROUND BASED ON URL
   useEffect(() => {
     if (location.pathname.includes("products")) {
       setPage(() => "Products");

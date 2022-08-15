@@ -23,6 +23,8 @@ export default function CartContext({ children }) {
 
   const addToCart = (item) => {
     // item.qty = quantity;
+
+    //CHECK IF ITEM ALREADY EXIST IN ORDER TO ADD NEW ITEM OR TO CHANGE QUANTITY
     let index = shoppingList?.findIndex(
       (e) => e.id == item.id && e.size == item.size
     );
@@ -34,6 +36,7 @@ export default function CartContext({ children }) {
     }
   };
 
+  //REMOVE ITEM FROM SHOPPING CART
   const removeItem = (item) => {
     setShoppingList((shoppingList) => {
       return shoppingList.filter((product) => product != item);

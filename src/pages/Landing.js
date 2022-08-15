@@ -6,6 +6,7 @@ import products from "../components/data";
 import { motion } from "framer-motion";
 
 export default function Landing() {
+  //SHOW 4 RANDOM PRODUCTS
   const shuffled = products.sort(() => 0.5 - Math.random());
   let selected = shuffled.slice(0, 4);
 
