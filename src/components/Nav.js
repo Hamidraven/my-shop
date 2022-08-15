@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaSearch,
   FaUserAlt,
@@ -46,13 +46,19 @@ const Nav = () => {
   //HANDLE NAV
   const handleToggle = (e) => {
     e.preventDefault();
-    if (!show) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+    if (window.innerWidth < 768) {
+      if (!show) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+      setShow(() => !show);
     }
-    setShow(() => !show);
   };
+
+  useEffect(() => {
+    document.body.style.overflow = "auto";
+  }, []);
 
   return (
     <nav className={showNav ? "scroll-nav" : undefined}>
