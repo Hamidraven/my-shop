@@ -61,6 +61,10 @@ const Nav = () => {
     document.body.style.overflow = "auto";
   }, []);
 
+  const handleOverflow = () => {
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <nav className={showNav ? "scroll-nav" : undefined}>
       <Link to="/my-shop" className="logo">
@@ -71,10 +75,14 @@ const Nav = () => {
         <ul className={`nav ${show && "slide-nav"}`}>
           <FaRegTimesCircle className="close" onClick={handleToggle} />
           <li>
-            <Link to="products">Shop</Link>
+            <Link to="products" onClick={() => handleOverflow}>
+              Shop
+            </Link>
           </li>
           <li>
-            <Link to="about">About Us</Link>
+            <Link to="about" onClick={() => handleOverflow}>
+              About Us
+            </Link>
           </li>
           <li>
             <a href="#">Contact Us</a>
