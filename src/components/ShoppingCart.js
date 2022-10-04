@@ -28,7 +28,12 @@ export default function ShoppingCart({ handleClose }) {
                 <p className="item-name">{item.name}</p>
                 <p className="size">{item.size.toUpperCase()}</p>
                 <p className="price">${item.price}</p>
-                <span type="number">{item.qty}</span>
+                <input
+                  type="number"
+                  defaultValue={item.qty}
+                  min="1"
+                  style={{ width: "40px" }}
+                />
                 <input
                   type="button"
                   value="remove"
